@@ -4,14 +4,6 @@
 
 ### Hugging Face LLM Integration
 
-```bash
-# Required for LLM architecture analysis
-HUGGINGFACEHUB_ACCESS_TOKEN=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
-
-# Alternative naming (both work)
-HUGGINGFACEHUB_API_TOKEN=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
-```
-
 **Get token at:** https://huggingface.co/settings/tokens
 
 **Token type:** `read` access (for inference)
