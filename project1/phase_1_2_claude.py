@@ -24,6 +24,21 @@ import re
 from collections import defaultdict
 import inspect
 from typing import Any
+from dotenv import load_dotenv
+
+# LangChain imports for HuggingFace integration
+try:
+    from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
+    from langchain_core.messages import HumanMessage, SystemMessage
+    from langchain_core.tools import StructuredTool
+    LANGCHAIN_AVAILABLE = True
+except ImportError as e:
+    # Create dummy classes for type hints
+    StructuredTool = type('StructuredTool', (), {})
+    HumanMessage = type('HumanMessage', (), {})
+    SystemMessage = type('SystemMessage', (), {})
+    LANGCHAIN_AVAILABLE = False
+    print(f"Warning: LangChain not fully available. Error: {e}")
 
 # Configure logging
 logging.basicConfig(
@@ -31,6 +46,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+# Load environment variables
+load_dotenv()
 
 
 def _rmtree_force(path: Path) -> None:
@@ -66,6 +84,14 @@ def _load_magic_module():
 _MAGIC = _load_magic_module()
 
 
+def _is_test_file(filepath: Path) -> bool:
+    """Check if file is a test file."""
+    test_keywords = {'test', 'spec', '_test.', 'tests/'}
+    name_lower = filepath.name.lower()
+    path_str = str(filepath).lower()
+    return any(keyword in name_lower or keyword in path_str for keyword in test_keywords)
+
+
 # ============================================================================
 # PHASE 1: FOUNDATION SETUP
 # ============================================================================
@@ -97,6 +123,7 @@ class RepositoryManager:
         self.max_size_bytes = max_size_gb * 1024 * 1024 * 1024
         self.max_size_gb = max_size_gb
         self.clone_dir = Path(__file__).resolve().parent / 'claude_cloned'
+        self.backup_dir = Path(__file__).resolve().parent / 'backups'
 
     def validate_github_url(self, url: str) -> bool:
         """Validate GitHub URL format."""
@@ -122,6 +149,11 @@ class RepositoryManager:
             raise ValueError(f"Invalid GitHub URL: {github_url}")
 
         logger.info(f"Starting repository clone from {github_url}")
+
+        # Create backup of existing clone if it exists
+        backup_path = self._create_backup()
+        if backup_path:
+            logger.info(f"Existing clone backed up to {backup_path}")
 
         # Prepare clone URL with token if provided
         if github_token and 'https' in github_url:
@@ -170,6 +202,22 @@ class RepositoryManager:
             _rmtree_force(self.clone_dir)
             logger.info("Clone directory cleaned up")
 
+    def _create_backup(self) -> Optional[Path]:
+        """Create timestamped backup of existing clone directory."""
+        if not self.clone_dir.exists():
+            return None
+        
+        try:
+            self.backup_dir.mkdir(parents=True, exist_ok=True)
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            backup_path = self.backup_dir / f"clone_backup_{timestamp}"
+            shutil.copytree(self.clone_dir, backup_path)
+            logger.info(f"Created backup at {backup_path}")
+            return backup_path
+        except Exception as e:
+            logger.warning(f"Failed to create backup: {e}")
+            return None
+
     def get_repo_metadata(self, repo_path: Path) -> Dict:
         """Extract repository metadata."""
         try:
@@ -213,9 +261,12 @@ class CodeScanner:
         self.mime = _MAGIC.Magic(mime=True) if _MAGIC and hasattr(
             _MAGIC, "Magic") else None
 
-    def scan_repository(self) -> Dict[str, List[Dict]]:
+    def scan_repository(self, separate_tests: bool = True) -> Dict[str, List[Dict]]:
         """
         Scan repository and categorize all code files.
+
+        Args:
+            separate_tests: If True, separate test files into 'test_files' category
 
         Returns:
             Dictionary with language as key and list of files as value
@@ -223,9 +274,11 @@ class CodeScanner:
         logger.info(f"Starting code scan on {self.repo_path}")
 
         code_files = defaultdict(list)
+        test_files = defaultdict(list)
         file_stats = {
             'total_files': 0,
             'code_files': 0,
+            'test_files': 0,
             'binary_files': 0,
             'ignored_files': 0,
         }
@@ -248,19 +301,27 @@ class CodeScanner:
 
                 if file_info:
                     language = file_info['language']
-                    code_files[language].append(file_info)
-                    file_stats['code_files'] += 1
+                    # Separate test files if requested
+                    if separate_tests and _is_test_file(filepath):
+                        test_files[language].append(file_info)
+                        file_stats['test_files'] += 1
+                    else:
+                        code_files[language].append(file_info)
+                        file_stats['code_files'] += 1
                 else:
                     file_stats['binary_files'] += 1
 
         logger.info(
-            f"Scan complete: {file_stats['code_files']} code files found")
+            f"Scan complete: {file_stats['code_files']} code files, {file_stats['test_files']} test files found")
         logger.info(f"File statistics: {file_stats}")
 
-        return {
+        result = {
             'files': dict(code_files),
+            'test_files': dict(test_files) if separate_tests else {},
             'statistics': file_stats,
         }
+        
+        return result
 
     def _analyze_file(self, filepath: Path) -> Optional[Dict]:
         """
@@ -932,6 +993,196 @@ class ArchitectureAnalyzer:
 
 
 # ============================================================================
+# ADJACENCY MATRIX BUILDER
+# ============================================================================
+
+class DependencyAdjacencyMatrixBuilder:
+    """Builds adjacency matrix from dependency graph."""
+
+    def __init__(self, dependency_graph: Dict):
+        """Initialize matrix builder."""
+        self.dependency_graph = dependency_graph
+
+    def build_adjacency_matrix(self) -> Dict:
+        """
+        Convert dependency graph to adjacency matrix format.
+
+        Returns:
+            Dictionary with matrix representation
+        """
+        logger.info("Building dependency adjacency matrix")
+
+        modules = sorted(list(self.dependency_graph.keys()))
+        module_to_idx = {m: i for i, m in enumerate(modules)}
+        n = len(modules)
+
+        # Initialize matrix
+        matrix = [[0 for _ in range(n)] for _ in range(n)]
+
+        # Fill matrix: 1 if row module imports column module
+        for module, deps in self.dependency_graph.items():
+            row_idx = module_to_idx[module]
+            for imported in deps.get('imports', []):
+                if imported in module_to_idx:
+                    col_idx = module_to_idx[imported]
+                    matrix[row_idx][col_idx] = 1
+
+        return {
+            'modules': modules,
+            'matrix': matrix,
+            'total_dependencies': sum(sum(row) for row in matrix),
+            'module_count': n
+        }
+
+    def generate_matrix_csv(self, matrix_data: Dict) -> str:
+        """Generate CSV representation of adjacency matrix."""
+        modules = matrix_data['modules']
+        matrix = matrix_data['matrix']
+
+        # Header
+        csv_lines = [''] + modules
+        csv_content = ','.join(csv_lines) + '\n'
+
+        # Rows
+        for i, module in enumerate(modules):
+            row_values = [module] + [str(matrix[i][j]) for j in range(len(modules))]
+            csv_content += ','.join(row_values) + '\n'
+
+        return csv_content
+
+
+# ============================================================================
+# LLM-POWERED ARCHITECTURE ANALYZER
+# ============================================================================
+
+class LLMArchitectureAnalyzer:
+    """Uses Hugging Face LLM to analyze code architecture in detail."""
+
+    def __init__(self, hf_token: Optional[str] = None):
+        """Initialize LLM analyzer."""
+        self.hf_token = hf_token or os.getenv('HUGGINGFACEHUB_ACCESS_TOKEN')
+        self.repo_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+        self.llm = None
+        
+        if LANGCHAIN_AVAILABLE and self.hf_token:
+            try:
+                endpoint = HuggingFaceEndpoint(
+                    repo_id=self.repo_id,
+                    huggingfacehub_api_token=self.hf_token,
+                    max_new_tokens=512,
+                    temperature=0.7,
+                )
+                self.llm = ChatHuggingFace(llm=endpoint)
+            except Exception as e:
+                logger.warning(f"Failed to initialize LLM: {e}")
+
+    def analyze_architecture(self, parsed_data: Dict, dependency_graph: Dict) -> Dict:
+        """
+        Use LLM to analyze architecture patterns and provide insights.
+
+        Args:
+            parsed_data: Parsed code modules
+            dependency_graph: Dependency relationships
+
+        Returns:
+            Dictionary with LLM analysis
+        """
+        logger.info("Running LLM-powered architecture analysis")
+
+        if not self.llm:
+            return {
+                'error': 'LLM not available',
+                'fallback': 'Using heuristic analysis only',
+                'reason': 'LangChain or HuggingFace not properly configured'
+            }
+
+        try:
+            # Prepare code summary for LLM
+            code_summary = self._prepare_code_summary(parsed_data, dependency_graph)
+
+            # Get LLM analysis
+            analysis_prompt = self._create_analysis_prompt(code_summary)
+            llm_response = self._query_llm(analysis_prompt)
+
+            return {
+                'llm_analysis': llm_response,
+                'code_summary': code_summary,
+                'analysis_timestamp': datetime.now().isoformat(),
+                'model': self.repo_id
+            }
+
+        except Exception as e:
+            logger.warning(f"LLM analysis failed: {e}")
+            return {
+                'error': str(e),
+                'fallback': 'Using heuristic analysis only'
+            }
+
+    def _prepare_code_summary(self, parsed_data: Dict, dependency_graph: Dict) -> str:
+        """Prepare code summary for LLM analysis."""
+        summary = "CODE STRUCTURE SUMMARY:\n\n"
+
+        # Module structure
+        summary += "MODULES:\n"
+        for module, data in list(parsed_data.items())[:10]:  # Limit to first 10
+            summary += f"- {module}: {len(data.get('functions', []))} functions, {len(data.get('classes', []))} classes\n"
+
+        # Dependencies
+        summary += "\nKEY DEPENDENCIES:\n"
+        top_deps = sorted(
+            dependency_graph.items(),
+            key=lambda x: len(x[1].get('imported_by', [])),
+            reverse=True
+        )[:5]
+        for module, deps in top_deps:
+            summary += f"- {module}: imported by {len(deps.get('imported_by', []))} modules\n"
+
+        # External dependencies
+        summary += "\nEXTERNAL DEPENDENCIES:\n"
+        external_deps = set()
+        for deps in dependency_graph.values():
+            external_deps.update(deps.get('external_deps', []))
+        for dep in list(external_deps)[:20]:
+            summary += f"- {dep}\n"
+
+        return summary
+
+    def _create_analysis_prompt(self, code_summary: str) -> str:
+        """Create LLM prompt for architecture analysis."""
+        prompt = f"""Analyze the following code structure and provide architectural insights:
+
+{code_summary}
+
+Please identify and explain:
+1. Core architectural components and their responsibilities
+2. Main design patterns used
+3. Data flow and information flow between modules
+4. Potential architectural improvements
+5. Risk areas and technical debt indicators
+
+Keep response concise and actionable."""
+        return prompt
+
+    def _query_llm(self, prompt: str) -> str:
+        """Query LLM using LangChain's ChatHuggingFace interface."""
+        try:
+            from langchain_core.messages import HumanMessage
+            
+            messages = [HumanMessage(content=prompt)]
+            response = self.llm.invoke(messages)
+            
+            # Extract content from response
+            if hasattr(response, 'content'):
+                return response.content
+            else:
+                return str(response)
+                
+        except Exception as e:
+            logger.warning(f"LLM query failed: {e}")
+            return f"Error querying LLM: {str(e)}"
+
+
+# ============================================================================
 # MAIN ORCHESTRATION
 # ============================================================================
 
@@ -974,9 +1225,9 @@ class CodeToDocOrchestrator:
         logger.info("PHASE 2: CODE UNDERSTANDING")
         logger.info("="*60)
 
-        # Step 2: Scan repository
+        # Step 2: Scan repository (with test file separation)
         scanner = CodeScanner(repo_path)
-        scan_results = scanner.scan_repository()
+        scan_results = scanner.scan_repository(separate_tests=True)
 
         logger.info(
             f"Scan results: {json.dumps(scan_results['statistics'], indent=2)}")
@@ -996,6 +1247,13 @@ class CodeToDocOrchestrator:
         logger.info(
             f"Complexity metrics: {json.dumps(complexity_metrics, indent=2)}")
 
+        # Step 3.5: Build adjacency matrix
+        matrix_builder = DependencyAdjacencyMatrixBuilder(dependency_graph)
+        adjacency_matrix = matrix_builder.build_adjacency_matrix()
+        matrix_csv = matrix_builder.generate_matrix_csv(adjacency_matrix)
+
+        logger.info(f"Built adjacency matrix: {adjacency_matrix['module_count']} modules")
+
         # Step 4: Analyze architecture
         arch_analyzer = ArchitectureAnalyzer(repo_path, dependency_graph)
         architecture = arch_analyzer.analyze_architecture()
@@ -1003,13 +1261,23 @@ class CodeToDocOrchestrator:
         logger.info(
             f"Architecture analysis: {json.dumps(architecture, indent=2)}")
 
+        # Step 4.5: LLM-powered architecture analysis
+        llm_analyzer = LLMArchitectureAnalyzer()
+        llm_analysis = llm_analyzer.analyze_architecture(parsed_code, dependency_graph)
+
+        logger.info(f"LLM analysis completed")
+
         self.results['phase2'] = {
             'code_files': scan_results['files'],
+            'test_files': scan_results.get('test_files', {}),
             'statistics': scan_results['statistics'],
             'parsed_modules': parsed_code,
             'dependency_graph': dependency_graph,
+            'adjacency_matrix': adjacency_matrix,
+            'matrix_csv': matrix_csv,
             'complexity_metrics': complexity_metrics,
             'architecture': architecture,
+            'llm_analysis': llm_analysis,
         }
 
         return self.results['phase2']
@@ -1024,11 +1292,573 @@ class CodeToDocOrchestrator:
             logger.info("ALL PHASES COMPLETED SUCCESSFULLY")
             logger.info("="*60)
 
+            # Phase 3: Agent Setup & Documentation Generation
+            logger.info("="*60)
+            logger.info("PHASE 3: AGENT SETUP & DOCUMENTATION GENERATION")
+            logger.info("="*60)
+            
+            agent = DocumentationAgent(
+                analysis_results=self.results,
+                hf_token=os.getenv("HUGGINGFACEHUB_ACCESS_TOKEN")
+            )
+            
+            documentation = agent.generate_documentation()
+            self.results["phase3"] = documentation
+            
+            logger.info("="*60)
+            logger.info("PHASE 3 COMPLETED SUCCESSFULLY")
+            logger.info("="*60)
+            
+            # Phase 4: Function-Level Docstring Generation
+            logger.info("="*60)
+            logger.info("PHASE 4: FUNCTION-LEVEL DOCSTRING GENERATION")
+            logger.info("="*60)
+            
+            docstring_generator = FunctionDocstringGenerator(
+                hf_token=os.getenv("HUGGINGFACEHUB_ACCESS_TOKEN")
+            )
+            
+            # Process all Python files
+            phase2_files = self.results.get("phase2", {}).get("code_files", {}).get("python", [])
+            phase4_results = {
+                "docstrings_generated": [],
+                "files_processed": 0,
+                "total_functions_documented": 0,
+                "status": "completed",
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            for file_info in phase2_files[:10]:  # Limit to first 10 files for speed
+                file_path = file_info.get("absolute_path", "")
+                if os.path.exists(file_path) and file_path.endswith(".py"):
+                    logger.info(f"Generating docstrings for {file_path}")
+                    result = docstring_generator.process_file(file_path)
+                    
+                    phase4_results["docstrings_generated"].append(result)
+                    phase4_results["files_processed"] += 1
+                    phase4_results["total_functions_documented"] += result.get("functions_documented", 0)
+            
+            self.results["phase4"] = phase4_results
+            
+            logger.info(f"Phase 4 completed: {phase4_results['total_functions_documented']} docstrings generated")
+            
+            # Phase 4B: Professional README Generation
+            logger.info("="*60)
+            logger.info("PHASE 4B: README GENERATION")
+            logger.info("="*60)
+            
+            readme_generator = READMEGenerator(
+                hf_token=os.getenv("HUGGINGFACEHUB_ACCESS_TOKEN")
+            )
+            
+            # Get clone path from Phase 1 results
+            clone_path = self.results.get("phase1", {}).get("repo_path", self.github_url.split("/")[-1])
+            readme_output_path = os.path.join(clone_path, "GENERATED_README.md")
+            
+            # Generate README using all phase results
+            readme_content = readme_generator.generate_readme(
+                phase1_results=self.results.get("phase1", {}),
+                phase2_results=self.results.get("phase2", {}),
+                phase3_results=self.results.get("phase3", {}),
+                output_path=readme_output_path
+            )
+            
+            self.results["phase4"]["readme_generated"] = {
+                "path": readme_output_path,
+                "status": "completed",
+                "length": len(readme_content)
+            }
+            
+            logger.info(f"README.md generated successfully at {readme_output_path}")
+            logger.info("="*60)
+            logger.info("ALL PHASES COMPLETED SUCCESSFULLY")
+            logger.info("="*60)
+            
             return self.results
 
         except Exception as e:
             logger.error(f"Execution failed: {e}")
             raise
+
+
+# ============================================================================
+# PHASE 3: AGENT SETUP & CONFIGURATION
+# ============================================================================
+
+class DocumentationAgent:
+    """
+    LangChain agent configured to generate developer-friendly documentation
+    by reasoning over the analyzed codebase structure.
+    """
+
+    def __init__(self, analysis_results: Dict[str, Any], hf_token: Optional[str] = None):
+        """
+        Initialize the documentation agent.
+        
+        Args:
+            analysis_results: Complete Phase 1 & 2 analysis results
+            hf_token: HuggingFace API token
+        """
+        self.analysis_results = analysis_results
+        self.hf_token = hf_token or os.getenv("HUGGINGFACEHUB_ACCESS_TOKEN")
+        
+        # Extract key data structures
+        self.dependency_graph = self._build_dependency_graph()
+        self.modules_info = self._extract_modules_info()
+        self.architecture = analysis_results.get("phase2", {}).get("architecture_analysis", {})
+        
+        # Initialize LLM if available
+        self.llm = None
+        if LANGCHAIN_AVAILABLE and self.hf_token:
+            self._initialize_llm()
+        
+        logger.info("Documentation agent initialized")
+
+    def _build_dependency_graph(self) -> Dict[str, Dict[str, Any]]:
+        """
+        Build a dependency graph representation from analysis results.
+        
+        Returns:
+            Dependency graph in the format:
+            {"module_a.py": {
+                "imports": ["module_b", "module_c"],
+                "imported_by": ["module_d"],
+                "external_deps": ["requests", "numpy"]
+            }}
+        """
+        graph = {}
+        
+        # Get parsed modules from Phase 2 (it's a dict, not a list)
+        parsed_modules_dict = self.analysis_results.get("phase2", {}).get("parsed_modules", {})
+        
+        # Convert dict to list for easier processing
+        for module_name, module_data in parsed_modules_dict.items():
+            imports = module_data.get("imports", [])
+            
+            # Separate internal and external dependencies
+            internal_imports = []
+            external_deps = []
+            
+            for imp in imports:
+                # Check if it's an internal import
+                is_internal = False
+                for other_module in parsed_modules_dict.keys():
+                    module_base = other_module.replace("\\", ".").replace("/", ".").replace(".py", "")
+                    if module_base in imp or imp.split()[0] == "from" and module_base in imp:
+                        is_internal = True
+                        break
+                
+                if is_internal:
+                    internal_imports.append(imp)
+                else:
+                    external_deps.append(imp)
+            
+            graph[module_name] = {
+                "imports": internal_imports,
+                "imported_by": [],  # Will be populated in second pass
+                "external_deps": external_deps,
+                "functions": [f["name"] for f in module_data.get("functions", [])],
+                "classes": [c["name"] for c in module_data.get("classes", [])]
+            }
+        
+        # Second pass: populate imported_by relationships
+        for module_name, data in graph.items():
+            for imported in data["imports"]:
+                for target_module in graph:
+                    if imported in target_module or target_module.replace(".py", "") in imported:
+                        if module_name not in graph[target_module]["imported_by"]:
+                            graph[target_module]["imported_by"].append(module_name)
+        
+        return graph
+
+    def _extract_modules_info(self) -> List[Dict[str, Any]]:
+        """Extract detailed module information."""
+        parsed_dict = self.analysis_results.get("phase2", {}).get("parsed_modules", {})
+        # Convert dict to list for easier iteration
+        return list(parsed_dict.values())
+
+    def _initialize_llm(self):
+        """Initialize the LangChain LLM for the agent."""
+        try:
+            endpoint = HuggingFaceEndpoint(
+                repo_id="meta-llama/Meta-Llama-3.1-8B-Instruct",
+                huggingfacehub_api_token=self.hf_token,
+                temperature=0.3,  # Lower temperature for more focused documentation
+            )
+            self.llm = ChatHuggingFace(llm=endpoint)
+            logger.info("LLM initialized for documentation agent")
+        except Exception as e:
+            logger.warning(f"Failed to initialize LLM: {e}")
+
+    def _create_agent_tools(self) -> List[StructuredTool]:
+        """
+        Create tools that the agent can use to reason over the codebase.
+        """
+        tools = []
+
+        # Tool 1: Get module information
+        def get_module_info(module_name: str) -> str:
+            """Get detailed information about a specific module."""
+            for module in self.modules_info:
+                if module_name in module.get("file", ""):
+                    info = f"Module: {module.get('file')}\n"
+                    info += f"Functions: {len(module.get('functions', []))}\n"
+                    info += f"Classes: {len(module.get('classes', []))}\n"
+                    info += f"Imports: {', '.join(module.get('imports', [])[:5])}\n"
+                    return info
+            return f"Module {module_name} not found"
+        
+        tools.append(StructuredTool.from_function(
+            func=get_module_info,
+            name="get_module_info",
+            description="Get detailed information about a specific module including functions, classes, and imports"
+        ))
+
+        # Tool 2: Get dependency graph
+        def get_dependencies(module_name: str) -> str:
+            """Get dependencies for a module."""
+            for mod, deps in self.dependency_graph.items():
+                if module_name in mod:
+                    return json.dumps(deps, indent=2)
+            return f"No dependencies found for {module_name}"
+        
+        tools.append(StructuredTool.from_function(
+            func=get_dependencies,
+            name="get_dependencies",
+            description="Get import and dependency information for a module"
+        ))
+
+        # Tool 3: Identify core modules
+        def identify_core_modules() -> str:
+            """Identify core modules and entry points."""
+            core = self.architecture.get("core_modules", [])
+            entry = self.architecture.get("entry_points", [])
+            return f"Core Modules: {', '.join(core[:5])}\nEntry Points: {', '.join(entry[:5])}"
+        
+        tools.append(StructuredTool.from_function(
+            func=identify_core_modules,
+            name="identify_core_modules",
+            description="Identify the core modules and entry points of the codebase"
+        ))
+
+        # Tool 4: Detect design patterns
+        def detect_patterns() -> str:
+            """Detect design patterns in the codebase."""
+            patterns = self.architecture.get("design_patterns", {})
+            return json.dumps(patterns, indent=2)
+        
+        tools.append(StructuredTool.from_function(
+            func=detect_patterns,
+            name="detect_patterns",
+            description="Detect design patterns like Factory, Singleton, Observer in the code"
+        ))
+
+        # Tool 5: Analyze data flow
+        def analyze_data_flow() -> str:
+            """Analyze data flow between modules."""
+            flow_info = ""
+            for module, deps in list(self.dependency_graph.items())[:5]:
+                flow_info += f"\n{module}:\n"
+                flow_info += f"  Imports: {', '.join(deps['imports'][:3])}\n"
+                flow_info += f"  Used by: {', '.join(deps['imported_by'][:3])}\n"
+            return flow_info
+        
+        tools.append(StructuredTool.from_function(
+            func=analyze_data_flow,
+            name="analyze_data_flow",
+            description="Analyze data flow and information exchange between modules"
+        ))
+
+        return tools
+
+    def _get_agent_personality_prompt(self) -> str:
+        """
+        Return the agent's personality and instructions.
+        
+        Frames the agent as a Senior Software Engineer reviewing legacy code.
+        """
+        return """You are a Senior Software Engineer reviewing legacy code and creating documentation 
+for junior developers. Your task is to generate clear, concise documentation that helps 
+team members understand the codebase quickly.
+
+For each module or function, provide:
+1. **Purpose**: What does this module/function do? Why does it exist?
+2. **Parameters**: List all parameters with their types and descriptions
+3. **Return Values**: Describe what is returned, including type and meaning
+4. **Examples**: Provide simple usage examples where helpful
+5. **Dependencies**: Note important dependencies and their roles
+6. **Design Patterns**: Identify any design patterns used
+
+Keep explanations concise but comprehensive. Use the tools available to gather information 
+about the codebase structure, dependencies, and architecture.
+
+Focus on making the documentation accessible to developers who may be new to this codebase."""
+
+    def generate_documentation(self, module_name: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Generate documentation using the agent.
+        
+        Args:
+            module_name: Specific module to document (None for all modules)
+            
+        Returns:
+            Generated documentation
+        """
+        logger.info("Starting Phase 3: Documentation generation")
+        
+        try:
+            if not self.llm:
+                logger.info("Using fallback documentation generation (no LLM)")
+                return self._generate_documentation_fallback(module_name)
+            
+            # Generate documentation for each module
+            all_docs = {
+                "documentation_by_module": {},
+                "timestamp": datetime.now().isoformat(),
+                "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+                "total_modules_documented": 0,
+                "overview": self._generate_codebase_overview()
+            }
+            
+            # If specific module requested, document only that
+            if module_name:
+                modules_to_doc = [m for m in self.modules_info if module_name in m.get("file", "")]
+            else:
+                modules_to_doc = self.modules_info
+            
+            # Generate documentation for each module
+            for module in modules_to_doc:
+                module_file = module.get("file", "")
+                logger.info(f"Generating documentation for {module_file}")
+                
+                doc = self._generate_module_documentation(module)
+                all_docs["documentation_by_module"][module_file] = doc
+                all_docs["total_modules_documented"] += 1
+            
+            logger.info("Documentation generation completed")
+            return all_docs
+            
+        except Exception as e:
+            logger.error(f"Documentation generation failed: {e}")
+            return self._generate_documentation_fallback(module_name)
+
+    def _generate_codebase_overview(self) -> str:
+        """
+        Generate an overview of the entire codebase.
+        """
+        overview = f"""# {self.analysis_results.get('phase1', {}).get('metadata', {}).get('name', 'Codebase')} Documentation
+
+## Repository Overview
+
+**Name**: {self.analysis_results.get('phase1', {}).get('metadata', {}).get('name', 'Unknown')}
+**URL**: {self.analysis_results.get('phase1', {}).get('metadata', {}).get('url', 'N/A')}
+**Branch**: {self.analysis_results.get('phase1', {}).get('metadata', {}).get('branch', 'main')}
+
+## Statistics
+- **Total Modules**: {len(self.modules_info)}
+- **Total Lines of Code**: {self.architecture.get('complexity_metrics', {}).get('total_lines', 0)}
+- **Programming Languages**: Python
+
+## Core Modules
+"""
+        
+        core_modules = self.architecture.get("core_modules", [])
+        for module in core_modules[:10]:
+            overview += f"- {module}\n"
+        
+        return overview
+
+    def _generate_module_documentation(self, module: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Generate documentation for a specific module.
+        """
+        module_file = module.get("file", "")
+        module_prompt = self._build_module_prompt(module)
+        
+        try:
+            # Query LLM for module documentation
+            messages = [HumanMessage(content=module_prompt)]
+            response = self.llm.invoke(messages)
+            
+            if hasattr(response, 'content'):
+                doc_content = response.content
+            else:
+                doc_content = str(response)
+            
+            return {
+                "file": module_file,
+                "docstring": module.get("docstring", "N/A"),
+                "functions": module.get("functions", []),
+                "classes": module.get("classes", []),
+                "imports": module.get("imports", []),
+                "generated_documentation": doc_content,
+                "dependencies": self.dependency_graph.get(module_file, {}),
+                "timestamp": datetime.now().isoformat()
+            }
+        except Exception as e:
+            logger.warning(f"LLM generation failed for {module_file}, using fallback")
+            return self._generate_module_documentation_fallback(module)
+
+    def _build_module_prompt(self, module: Dict[str, Any]) -> str:
+        """
+        Build a detailed prompt for documenting a specific module.
+        """
+        module_file = module.get("file", "")
+        functions = module.get("functions", [])
+        classes = module.get("classes", [])
+        imports = module.get("imports", [])
+        docstring = module.get("docstring", "")
+        
+        prompt = f"""{self._get_agent_personality_prompt()}
+
+## FILE TO DOCUMENT: {module_file}
+
+### Original Docstring
+{docstring if docstring else "(No docstring available)"}
+
+### Module Imports
+{json.dumps(imports[:10], indent=2)}
+
+### Functions in Module
+{json.dumps([f.get('name') for f in functions[:10]], indent=2) if functions else "No functions"}
+
+### Classes in Module
+"""
+        
+        for cls in classes[:10]:
+            prompt += f"\n**{cls.get('name', 'Unknown')}**"
+            methods = cls.get('methods', [])
+            if methods:
+                prompt += f"\n  Methods: {', '.join([m.get('name') for m in methods[:5]])}"
+        
+        prompt += f"""
+
+Generate comprehensive documentation for the {module_file} file following this structure:
+
+## File Purpose
+Briefly explain what this module does and why it exists.
+
+## Key Functions
+For each important function, provide:
+- **Function name**: description
+  - Parameters: (types and descriptions)
+  - Returns: (type and meaning)
+  - Example usage
+
+## Key Classes
+For each important class, provide:
+- **Class name**: description
+- Important methods and their purposes
+
+## Dependencies
+List external and internal dependencies and their roles.
+
+## Usage Examples
+Provide 2-3 practical examples of how to use this module.
+
+## Design Patterns
+Identify any design patterns used in this module.
+
+Format the documentation in clear, concise markdown suitable for junior developers.
+"""
+        
+        return prompt
+
+    def _generate_module_documentation_fallback(self, module: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Generate basic documentation for a module without LLM.
+        """
+        module_file = module.get("file", "")
+        
+        doc = f"""# {module_file}
+
+## Module Purpose
+
+This module contains {len(module.get('functions', []))} functions and {len(module.get('classes', []))} classes.
+
+## Imports
+"""
+        
+        for imp in module.get("imports", [])[:5]:
+            doc += f"- {imp}\n"
+        
+        doc += "\n## Classes\n\n"
+        
+        for cls in module.get("classes", []):
+            doc += f"### {cls.get('name', 'Unknown')}\n"
+            doc += f"Location: Line {cls.get('lineno', 'N/A')}\n"
+            methods = cls.get('methods', [])
+            if methods:
+                doc += f"Methods: {', '.join([m.get('name') for m in methods[:5]])}\n"
+            doc += "\n"
+        
+        doc += "\n## Functions\n\n"
+        
+        for func in module.get("functions", []):
+            doc += f"### {func.get('name', 'Unknown')}\n"
+            doc += f"Location: Line {func.get('lineno', 'N/A')}\n\n"
+        
+        return {
+            "file": module_file,
+            "docstring": module.get("docstring", "N/A"),
+            "functions": module.get("functions", []),
+            "classes": module.get("classes", []),
+            "imports": module.get("imports", []),
+            "generated_documentation": doc,
+            "dependencies": self.dependency_graph.get(module_file, {}),
+            "timestamp": datetime.now().isoformat()
+        }
+
+    def _generate_documentation_fallback(self, module_name: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Generate documentation without LLM.
+        """
+        logger.info("Using fallback documentation generation (no LLM)")
+        
+        all_docs = {
+            "documentation_by_module": {},
+            "timestamp": datetime.now().isoformat(),
+            "overview": self._generate_codebase_overview(),
+            "total_modules_documented": 0
+        }
+        
+        # If specific module requested, document only that
+        if module_name:
+            modules_to_doc = [m for m in self.modules_info if module_name in m.get("file", "")]
+        else:
+            modules_to_doc = self.modules_info
+        
+        # Generate fallback documentation for each module
+        for module in modules_to_doc:
+            module_file = module.get("file", "")
+            doc = self._generate_module_documentation_fallback(module)
+            all_docs["documentation_by_module"][module_file] = doc
+            all_docs["total_modules_documented"] += 1
+        
+        return all_docs
+
+
+# ============================================================================
+# PHASE 4: FUNCTION-LEVEL DOCSTRING GENERATION (imported from separate module)
+# ============================================================================
+
+# Import Phase 4 implementation
+try:
+    from phase4_docstring_generator import FunctionDocstringGenerator, READMEGenerator
+except ImportError:
+    logger.warning("Could not import from phase4_docstring_generator.py")
+    # Provide stub classes for graceful fallback
+    class FunctionDocstringGenerator:
+        def __init__(self, hf_token=None):
+            pass
+        def process_file(self, file_path):
+            return {"file": file_path, "status": "error", "functions_documented": 0}
+    
+    class READMEGenerator:
+        def __init__(self, hf_token=None):
+            pass
+        def generate_readme(self, phase1_results, phase2_results, phase3_results=None, output_path=None):
+            return "# README\n\nFallback README - Phase 4 module not available."
 
 
 # ============================================================================
@@ -1038,7 +1868,8 @@ class CodeToDocOrchestrator:
 if __name__ == "__main__":
     # Example usage
     orchestrator = CodeToDocOrchestrator(
-        github_url="https://github.com/chavarera/s-tool.git",
+        # github_url="https://github.com/chavarera/s-tool.git",
+        github_url="https://github.com/Jaychangani2005/Application.git",
         github_token=os.getenv("GITHUB_TOKEN")
     )
 
@@ -1047,6 +1878,12 @@ if __name__ == "__main__":
     # Save results
     output_path = Path("output/analysis_results.json")
     output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_path, 'w') as f:
+        json.dump(results, f, indent=2, default=str)
+
+    logger.info(f"Results saved to {output_path}")
+
 
     with open(output_path, 'w') as f:
         json.dump(results, f, indent=2, default=str)

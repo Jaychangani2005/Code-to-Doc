@@ -3,1147 +3,457 @@
     "repo_path": "E:\\Code to Doc\\project1\\claude_cloned",
     "metadata": {
       "name": "claude_cloned",
-      "url": "https://github.com/chavarera/s-tool.git",
+      "url": "https://github.com/Jaychangani2005/Application.git",
       "branch": "main",
-      "commit": "392d357a",
-      "last_commit": "2023-06-05T00:19:38+05:30",
-      "description": "**S-TOOL**\n\n.. image:: https://user-images.githubusercontent.com/33047641/125023819-41998700-e09d-11eb-8076-7fad81f98f70.png\n   :width: 150\n\n\n``S-Tool`` is a utility module that provides helpful methods for interacting with Selenium WebDriver in Python\n\nInstallation\n^^^^^^^^^^^^\n\nInstallation using PyPi\n-----------------------\n\n.. code:: bash\n\n    pip install s-tool\n\n\nDevelopment Setup\n-----------------\n\n.. code:: bash\n\n   # Clone this repository\n    git clone https://github.com/Python-World/s-t"
+      "commit": "db590085",
+      "last_commit": "2025-03-19T10:04:28+05:30",
+      "description": "No description available"
     }
   },
   "phase2": {
     "code_files": {
       "python": [
         {
-          "path": "docs\\conf.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\docs\\conf.py",
+          "path": "manage.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\manage.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 1607,
-          "lines": 61
+          "size": 689,
+          "lines": 22
         },
         {
-          "path": "s_tool\\core.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\s_tool\\core.py",
+          "path": "commercial\\asgi.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\asgi.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 29162,
-          "lines": 882
+          "size": 415,
+          "lines": 16
         },
         {
-          "path": "s_tool\\driver.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\s_tool\\driver.py",
+          "path": "commercial\\settings.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\settings.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 2484,
-          "lines": 77
+          "size": 3618,
+          "lines": 135
         },
         {
-          "path": "s_tool\\exceptions.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\s_tool\\exceptions.py",
+          "path": "commercial\\urls.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\urls.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 567,
-          "lines": 30
+          "size": 317,
+          "lines": 11
         },
         {
-          "path": "s_tool\\logger.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\s_tool\\logger.py",
+          "path": "commercial\\wsgi.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\wsgi.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 102,
-          "lines": 7
+          "size": 415,
+          "lines": 16
         },
         {
-          "path": "s_tool\\parser.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\s_tool\\parser.py",
+          "path": "myapp\\admin.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\admin.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 1383,
-          "lines": 49
+          "size": 186,
+          "lines": 6
         },
         {
-          "path": "s_tool\\__init__.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\s_tool\\__init__.py",
+          "path": "myapp\\app.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\app.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 199,
-          "lines": 12
+          "size": 1235,
+          "lines": 42
         },
         {
-          "path": "tests\\test_core.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\tests\\test_core.py",
+          "path": "myapp\\apps.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\apps.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 5562,
-          "lines": 151
+          "size": 148,
+          "lines": 6
         },
         {
-          "path": "tests\\test_parser.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\tests\\test_parser.py",
+          "path": "myapp\\forms.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\forms.py",
           "language": "python",
           "extension": ".py",
           "encoding": "ascii",
-          "size": 864,
-          "lines": 29
-        },
-        {
-          "path": "tests\\test_version.py",
-          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\tests\\test_version.py",
-          "language": "python",
-          "extension": ".py",
-          "encoding": "ascii",
-          "size": 221,
+          "size": 205,
           "lines": 8
+        },
+        {
+          "path": "myapp\\models.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\models.py",
+          "language": "python",
+          "extension": ".py",
+          "encoding": "ascii",
+          "size": 473,
+          "lines": 17
+        },
+        {
+          "path": "myapp\\urls.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\urls.py",
+          "language": "python",
+          "extension": ".py",
+          "encoding": "ascii",
+          "size": 1050,
+          "lines": 21
+        },
+        {
+          "path": "myapp\\views.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\views.py",
+          "language": "python",
+          "extension": ".py",
+          "encoding": "ascii",
+          "size": 3706,
+          "lines": 106
+        },
+        {
+          "path": "myapp\\migrations\\0001_initial.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\migrations\\0001_initial.py",
+          "language": "python",
+          "extension": ".py",
+          "encoding": "ascii",
+          "size": 634,
+          "lines": 23
+        },
+        {
+          "path": "myapp\\migrations\\0002_bookfree.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\migrations\\0002_bookfree.py",
+          "language": "python",
+          "extension": ".py",
+          "encoding": "ascii",
+          "size": 594,
+          "lines": 21
+        }
+      ]
+    },
+    "test_files": {
+      "python": [
+        {
+          "path": "myapp\\tests.py",
+          "absolute_path": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\tests.py",
+          "language": "python",
+          "extension": ".py",
+          "encoding": "ascii",
+          "size": 63,
+          "lines": 3
         }
       ]
     },
     "statistics": {
-      "total_files": 37,
-      "code_files": 10,
-      "binary_files": 26,
-      "ignored_files": 1
+      "total_files": 48,
+      "code_files": 14,
+      "test_files": 1,
+      "binary_files": 33,
+      "ignored_files": 0
     },
     "parsed_modules": {
-      "docs\\conf.py": {
-        "file": "docs\\conf.py",
-        "docstring": null,
+      "manage.py": {
+        "file": "manage.py",
+        "docstring": "Django's command-line utility for administrative tasks.",
         "imports": [
           "import os",
-          "import sys",
-          "from s_tool import __version__ as _version"
+          "import sys"
+        ],
+        "functions": [
+          {
+            "name": "main",
+            "lineno": 7,
+            "end_lineno": 18,
+            "docstring": "Run administrative tasks.",
+            "signature": "main()",
+            "parameters": [],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 2
+          }
+        ],
+        "classes": [],
+        "constants": [],
+        "module_level_code": true
+      },
+      "commercial\\asgi.py": {
+        "file": "commercial\\asgi.py",
+        "docstring": "ASGI config for Application project.\n\nIt exposes the ASGI callable as a module-level variable named ``application``.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/howto/deployment/asgi/",
+        "imports": [
+          "import os",
+          "from django.core.asgi import get_asgi_application"
         ],
         "functions": [],
         "classes": [],
         "constants": [],
         "module_level_code": true
       },
-      "s_tool\\core.py": {
-        "file": "s_tool\\core.py",
-        "docstring": "SeleniumTools",
+      "commercial\\settings.py": {
+        "file": "commercial\\settings.py",
+        "docstring": "Django settings for Application project.\n\nGenerated by 'django-admin startproject' using Django 4.2.5.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/topics/settings/\n\nFor the full list of settings and their values, see\nhttps://docs.djangoproject.com/en/4.2/ref/settings/",
         "imports": [
-          "import inspect",
-          "import os",
-          "import string",
-          "import types",
-          "from typing import List, Optional, Type",
-          "from urllib.parse import urlparse",
-          "from selenium import webdriver",
-          "from selenium.common.exceptions import NoSuchElementException, TimeoutException",
-          "from selenium.webdriver.common.action_chains import ActionChains",
-          "from selenium.webdriver.common.by import By",
-          "from selenium.webdriver.common.keys import Keys",
-          "from selenium.webdriver.remote.webelement import WebElement",
-          "from selenium.webdriver.support import expected_conditions as EC",
-          "from selenium.webdriver.support.select import Select",
-          "from selenium.webdriver.support.ui import WebDriverWait",
-          "from .driver import SeleniumDriver",
-          "from .exceptions import InvalidWebDriverError, SToolException",
-          "from .logger import logger",
-          "from .parser import LxmlParser"
+          "from pathlib import Path"
         ],
         "functions": [],
-        "classes": [
+        "classes": [],
+        "constants": [
           {
-            "name": "SeleniumTools",
+            "name": "BASE_DIR",
+            "lineno": 16,
+            "value": "Path(__file__).resolve().parent.parent"
+          },
+          {
+            "name": "SECRET_KEY",
+            "lineno": 23,
+            "value": "'django-insecure-4#o@6_p&kmtwe6@nmaf2!9xl0pq7swg-&48i2)u#rkz@3z%74('"
+          },
+          {
+            "name": "DEBUG",
+            "lineno": 26,
+            "value": "False"
+          },
+          {
+            "name": "ALLOWED_HOSTS",
             "lineno": 29,
-            "end_lineno": 878,
-            "docstring": "A utility class for Selenium utilities functions.",
-            "bases": [],
-            "decorators": [],
-            "methods": [
-              {
-                "name": "__init__",
-                "lineno": 35,
-                "end_lineno": 48,
-                "docstring": null,
-                "signature": "__init__(self, driver: webdriver = None, **kwargs) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "driver",
-                    "type": "webdriver",
-                    "default": "None",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "**kwargs",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "var_keyword"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 3
-              },
-              {
-                "name": "__exit__",
-                "lineno": 50,
-                "end_lineno": 59,
-                "docstring": "release the resources occupied with the current session\n\nArgs:\n    type ([type]): type\n    value ([type]): value\n    traceback ([type]): and traceback",
-                "signature": "__exit__(self, typesa, value, tracebacks)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "typesa",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "value",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "tracebacks",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 2
-              },
-              {
-                "name": "__enter__",
-                "lineno": 61,
-                "end_lineno": 73,
-                "docstring": "Returns an selenium webdriver\nAllows you to implement objects\nwhich can be used easily with the with statement\n\nReturns:\n    [webDriver]: selenium webdriver",
-                "signature": "__enter__(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 2
-              },
-              {
-                "name": "_load_driver",
-                "lineno": 75,
-                "end_lineno": 82,
-                "docstring": "Create Selenium webdriver object",
-                "signature": "_load_driver(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
-              },
-              {
-                "name": "_close",
-                "lineno": 84,
-                "end_lineno": 88,
-                "docstring": "will stop driver after program execution",
-                "signature": "_close(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
-              },
-              {
-                "name": "_attach_custom_parsers",
-                "lineno": 90,
-                "end_lineno": 115,
-                "docstring": "Attaches custom parsers from the given parser class to the LxmlParser class.\n\nArgs:\n    parser_class (class): The parser class containing custom parsers.\n\nExample:\n    # Create an instance of SeleniumTools\n    MyCustomParser:\n        def table(self,html_string,**kwargs):\n            ## process and return html string\n            processed_list = []\n            return processed_list\n\n    selenium_tools = SeleniumTools(driver,parser_class=MyCustomParser)",
-                "signature": "_attach_custom_parsers(self, parser_class: Type) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "parser_class",
-                    "type": "Type",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 2
-              },
-              {
-                "name": "parse",
-                "lineno": 117,
-                "end_lineno": 166,
-                "docstring": "Parses an HTML element using the specified tag and locator.\n\nArgs:\n    ele_tag: str\n        - The HTML tag to parse.\n    locator_text: str\n        - The locator text to find the HTML element.\n    locator_type: str, optional\n        - The locator type. Defaults to id.\n    kwargs: dict\n        - Additional keyword arguments to pass to the parser.\n\nReturns:\n    object : objects\n        - The parsed result.\n\nRaises:\n    NotImplementedError: exception\n        - If the parser for the specified tag is not implemented.\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Parse a table element by ID\n    result = selenium_tools.parse(\"table\", \"table_id\")\n\n    # Parse a table with xpath\n    result = selenium_tools.parse(\"table\", \"//table\",\"xpath\", attr1=value1)",
-                "signature": "parse(self, ele_tag: str, locator_text: str, locator_type: str = 'id', **kwargs)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "ele_tag",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_text",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_type",
-                    "type": "str",
-                    "default": "'id'",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "**kwargs",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "var_keyword"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 3
-              },
-              {
-                "name": "_get_supported_browsers",
-                "lineno": 168,
-                "end_lineno": 188,
-                "docstring": "Get a list of all supported browsers by Selenium.\n\nReturns:\n    List[str]: A list of supported browsers.\n\nExample:\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Get the supported browsers\n    supported_browsers = selenium_tools._get_supported_browsers()\n\n    print(\"Supported Browsers:\", supported_browsers)",
-                "signature": "_get_supported_browsers(self) -> List[str]",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "List[str]",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
-              },
-              {
-                "name": "_validate_driver",
-                "lineno": 190,
-                "end_lineno": 221,
-                "docstring": "Validates the Selenium WebDriver by performing a basic operation.\n\nRaises:\n    InvalidWebDriverError: If the input is not a valid Selenium WebDriver.\n\nExample:\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Validate the driver\n    selenium_tools._validate_driver()",
-                "signature": "_validate_driver(self) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 5
-              },
-              {
-                "name": "sessionid",
-                "lineno": 223,
-                "end_lineno": 244,
-                "docstring": "Returns the session ID of the WebDriver instance.\n\nReturns:\n    session_id : str\n        - The session ID of the WebDriver instance.\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Get the session ID\n    sessionid = selenium_tools.sessionid()\n\n    print(\"Session ID:\", sessionid)",
-                "signature": "sessionid(self) -> str",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "str",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "_is_valid_html",
-                "lineno": 246,
-                "end_lineno": 277,
-                "docstring": "Modifies the provided string based on its type\n(local file path, public URL, or HTML content).\n\nArgs:\n    content (str): The string content to modify.\n\nReturns:\n    str: The modified string.\n\nRaises:\n    ValueError: If the provided content is empty or not a valid string.",
-                "signature": "_is_valid_html(self, content: str) -> str",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "content",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "str",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 7
-              },
-              {
-                "name": "get",
-                "lineno": 279,
-                "end_lineno": 313,
-                "docstring": "Visits the given URL or local HTML file or html content using the Selenium WebDriver.\n\nArgs:\n    url: str\n        - The URL or local HTML file path to visit.\n\nRaises:\n    ValueError: If the URL is empty or not a valid string.\n\nReturns:\n    None\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Visit a URL\n    selenium_tools.visit(\"https://www.example.com\")\n\n    # Visit a local HTML file\n    selenium_tools.visit(\"file:///path/to/local/file.html\")",
-                "signature": "get(self, url_or_html: str) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "url_or_html",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 3
-              },
-              {
-                "name": "get_locator",
-                "lineno": 315,
-                "end_lineno": 356,
-                "docstring": "Returns a locator tuple for the specified attribute value and locator type.\n\nArgs:\n    locator_text: str\n        - The attribute value of the element.\n    locator_type: str, optional\n        - The type of locator to use (class_name, tag_name, xpath, css_selector)\n        - Defaults to \"id\".\n\nReturns:\n    key,val : tuple\n        - A locator tuple in the format (By.locator, locator_value).\n\nRaises:\n    ValueError: If the locator type is invalid.\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Get a locator for an element with ID 'myElement'\n    locator = selenium_tools.get_locator('myElement', 'id')\n\n    print(\"Locator:\", locator)",
-                "signature": "get_locator(self, locator_text: str, locator_type: str = 'id') -> tuple",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_text",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_type",
-                    "type": "str",
-                    "default": "'id'",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "tuple",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "click",
-                "lineno": 358,
-                "end_lineno": 412,
-                "docstring": "Clicks on an element with the specified locator within the given Selenium WebDriver instance.\n\nArgs:\n    locator_text: str\n        The attribute value of the element to click.\n\n    locator_type: str, optional\n        - The type of locator to use (class_name, tag_name, xpath, css_selector).\n        - Defaults to \"id\".\n\n    click_time: int, optional\n         - The maximum wait time in seconds for the element to be clickable.\n         - Defaults to 10.\n\nReturns:\n    status: bool\n        * True if the element is clicked successfully.\n        * False if the element is not clicked within the specified time.\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Click on an element with ID 'myElement'\n    success = selenium_tools.click('myElement', 'id')\n\n    if success:\n        print(\"Element clicked successfully.\")\n    else:\n        print(\"Element click failed.\")",
-                "signature": "click(self, locator_text: str, locator_type: str = 'id', click_time: int = 10) -> bool",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_text",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_type",
-                    "type": "str",
-                    "default": "'id'",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "click_time",
-                    "type": "int",
-                    "default": "10",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "bool",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "get_element",
-                "lineno": 414,
-                "end_lineno": 471,
-                "docstring": "Returns an element or a list of elements using the specified\nlocator type and text.\n\nArgs:\n    locator_text: str\n        - The attribute value of the element to locate.\n\n    locator_type: str, optional\n        - The type of locator to use (class_name, tag_name, xpath, css_selector)\n        - Defaults to \"id\".\n\n    many: bool, optional\n        - Returns a list of elements if True,\n        - returns a single element if False or None.\n        - Defaults to None.\n\nRaises:\n    SToolException: If an invalid selector is provided.\n\nReturns:\n    element :  [List[WebElement]]\n        - A list of elements if many=True.\n        - A single element if many=False or None.\n        - None if the element is not found.\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Get a single element by ID\n    element = selenium_tools.get_element('myElement', 'id', many=False)\n\n    # Get multiple elements by class name\n    elements = selenium_tools.get_element('myClass', 'class_name', many=True)",
-                "signature": "get_element(self, locator_text: str, locator_type: str = 'id', many: Optional[bool] = None) -> Optional[List[WebElement]]",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_text",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_type",
-                    "type": "str",
-                    "default": "'id'",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "many",
-                    "type": "Optional[bool]",
-                    "default": "None",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Optional[List[WebElement]]",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 4
-              },
-              {
-                "name": "select_option",
-                "lineno": 473,
-                "end_lineno": 539,
-                "docstring": "Selects a dropdown option based on the specified criteria.\n\nArgs:\n    element: WebElement\n        - The Selenium WebElement representing the dropdown element.\n    _value: str\n        - The value, text, or index to select the option by.\n\n    _by: int, optional\n        - The selector type. Defaults to 0.\n        - 0: Select the option by value.\n        - 1: Select the option by visible text.\n        - 2: Select the option by index (requires _value to be an integer).\n\nRaises:\n    * SToolException: If the element is not a select (dropdown) element.\n    * SToolException: If an invalid selector is provided.\n    * SToolException: If an invalid value is provided when selecting by index.\n\nReturns:\n    None\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Assuming `dropdown_element` is a WebElement representing a dropdown\n    # Select an option by value\n    selenium_tools.select_option(dropdown_element, 'option_value', _by=0)\n\n    # Select an option by visible text\n    selenium_tools.select_option(dropdown_element, 'Option Text', _by=1)\n\n    # Select an option by index\n    selenium_tools.select_option(dropdown_element, 2, _by=2)",
-                "signature": "select_option(self, element: WebElement, _value: str, _by: int = 0) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "element",
-                    "type": "WebElement",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "_value",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "_by",
-                    "type": "int",
-                    "default": "0",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 6
-              },
-              {
-                "name": "fill",
-                "lineno": 541,
-                "end_lineno": 599,
-                "docstring": "Inserts or selects values using the specified criteria\nfor a collection of form elements.\n\nArgs:\n\n    kwargs: dict\n\n        - A dictionary containing the form elements as keys and their corresponding values or options as values.\n\n    _by: int, optional\n\n        - The selector type. Defaults to 0.\n        - 0: Select the option by value (for dropdown elements).\n        - 1: Select the option by visible text (for dropdown elements).\n        - 2: Select the option by index (for dropdown elements).\n\nRaises:\n    SToolException: If an invalid selector is provided.\n    SToolException: If an invalid value is provided when selecting by index.\n\nReturns:\n    None\n\nExample:\n\n.. code-block:: python\n\n    # Create an instance of SeleniumTools\n    selenium_tools = SeleniumTools(driver)\n\n    # Assuming `form_elements` is a dictionary of form elements and their values\n    # Fill in form elements\n    selenium_tools.fill(form_elements)\n\n    # Fill in form elements using index selector\n    selenium_tools.fill(form_elements, _by=2)",
-                "signature": "fill(self, kwargs: dict, _by: int = 0) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "kwargs",
-                    "type": "dict",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "_by",
-                    "type": "int",
-                    "default": "0",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 7
-              },
-              {
-                "name": "press_multiple_keys",
-                "lineno": 601,
-                "end_lineno": 653,
-                "docstring": "Presses multiple keys simultaneously using Selenium.\n\nArgs:\n    keys:list\n        - A list of keys to press.\n\nRaises:\n    ValueError: If any of the keys are not valid.\n\nExample usage:\n\n.. code-block:: python\n\n    selenium_tools = SeleniumTools(driver)\n    keys_to_press = ['CTRL','SHIFT','A']  # Example: Pressing CTRL+SHIFT+A\n    selenium_tools.press_multiple_keys(keys_to_press)",
-                "signature": "press_multiple_keys(self, keys: list)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "keys",
-                    "type": "list",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 11
-              },
-              {
-                "name": "cookies",
-                "lineno": 655,
-                "end_lineno": 675,
-                "docstring": "Returns the cookies of the given Selenium WebDriver instance as a dictionary.\n\nReturns:\n    cookies_dict :dict\n        - The cookies as a dictionary.\n        - If no cookies are present,an empty dictionary is returned.\n\nExample:\n\n.. code-block:: python\n\n    selenium_tools = SeleniumTools(driver)\n    cookies = selenium_tools.cookies()\n    print(cookies)",
-                "signature": "cookies(self) -> dict",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "dict",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "set_cookies",
-                "lineno": 677,
-                "end_lineno": 722,
-                "docstring": "Adds cookies to the given Selenium WebDriver instance.\n\nArgs:\n    drop_all: bool, optional\n        - If True, delete all cookies before adding the new ones.\n        - Defaults to False.\n    drop_keys: list, optional\n        - A set of cookie names to be deleted before adding the new ones.\n        - Defaults to an none.\n\n    cookies:\n        - Keyword arguments representing the cookies to be added.\n        - Each keyword argument should be in the format 'name=value'.\n\nReturns:\n    None\n\nExample:\n\n.. code-block:: python\n\n    selenium_tools = SeleniumTools(driver)\n    selenium_tools.set_cookies(drop_all=True, cookie1='value1', cookie2='value2')",
-                "signature": "set_cookies(self, drop_all: bool = False, drop_keys: None = None, **cookies) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "drop_all",
-                    "type": "bool",
-                    "default": "False",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "drop_keys",
-                    "type": "None",
-                    "default": "None",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "**cookies",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "var_keyword"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 4
-              },
-              {
-                "name": "execute_js",
-                "lineno": 724,
-                "end_lineno": 758,
-                "docstring": "Execute a JavaScript statement using the given\nSelenium WebDriver instance and return the output.\n\nArgs:\n    statement: str\n        - The JavaScript statement or variable name to run.\n\nRaises:\n    ValueError: If the statement is not a valid string.\n\nReturns:\n    result :str\n        - The console output of the executed js statement in string format.\n\nExample:\n\n.. code-block:: python\n\n    selenium_tools = SeleniumTools(driver)\n    url = selenium_tools.execute_js(\"document.URL\")\n    print(\"Current URL:\", url)",
-                "signature": "execute_js(self, statement: str) -> str",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "statement",
-                    "type": "str",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "str",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 4
-              },
-              {
-                "name": "text",
-                "lineno": 760,
-                "end_lineno": 781,
-                "docstring": "Returns the HTML source code of the currently loaded page\nin the given Selenium WebDriver instance.\n\nRaises:\n    ValueError: If the driver is not a valid WebDriver instance.\n\nReturns:\n    html_string: str\n        - The HTML source code of the currently loaded page.\n\nExample:\n\n.. code-block:: python\n\n    selenium_tools = SeleniumTools(driver)\n    source = selenium_tools.page_source()\n    print(\"Page Source:\", source)",
-                "signature": "text(self) -> str",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "str",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "url",
-                "lineno": 783,
-                "end_lineno": 800,
-                "docstring": "Returns the current loaded URL in the given Selenium WebDriver instance.\n\nReturns:\n    url :str\n        - The current loaded URL.\n\nExample:\n\n.. code-block:: python\n\n    selenium_tools = SeleniumTools(driver)\n    url = selenium_tools.url()\n    print(\"Current URL:\", url)",
-                "signature": "url(self) -> str",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "str",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "wait_for_element",
-                "lineno": 802,
-                "end_lineno": 843,
-                "docstring": "Waits for an element to be present and visible on the page.\n\nArgs:\n    locator_text:str\n        - The text of the locator.\n    locator_type: str\n        - The type of locator to use (default: 'id').\n    timeout : int\n        - The maximum time in seconds to wait for the element (default: 10).\n\nRaises:\n    TimeoutException: If the element is not found within the specified timeout.\n\nReturns:\n    element : WebElement\n        - The found element.\n\nExample Usage:\n\n.. code-block:: python\n\n    selenium_tool = SeleniumTool(driver)\n    try:\n        # Wait for an element with id 'my_element' to be present and visible\n        element = selenium_tool.wait_for_element('my_element', 'id')\n\n        # Perform actions on the element\n        element.click()\n    except TimeoutException:\n        print(\"Element not found within the specified timeout.\")",
-                "signature": "wait_for_element(self, locator_text, locator_type = 'id', timeout = 10)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_text",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "locator_type",
-                    "type": "Any",
-                    "default": "'id'",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "timeout",
-                    "type": "Any",
-                    "default": "10",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "element_visibility",
-                "lineno": 845,
-                "end_lineno": 878,
-                "docstring": "Toggles the visibility of an element on the page.\n\nArgs:\n    element: WebElement\n        The WebElement object representing the element to be toggled.\n\n    hide: bool, optional\n        - Determines whether to hide the element.\n        - If True (default), the element will be hidden.\n        - If False,the element will be shown.\n\nExample usage:\n\n .. code-block:: python\n\n    selenium_tools = SeleniumTools(driver)\n\n    # Wait for an element to be present\n    element = selenium_tools.wait_for_element(\"//div[@id='myElement']\")\n\n    # Hide the element\n    selenium_tools.element_visibility(element, hide=True)\n\n    # Show the element\n    selenium_tools.element_visibility(element, hide=False)",
-                "signature": "element_visibility(self, element: WebElement, hide: bool = True) -> None",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "element",
-                    "type": "WebElement",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "hide",
-                    "type": "bool",
-                    "default": "True",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "None",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              }
-            ],
-            "attributes": [],
-            "is_private": false
+            "value": "['*']"
+          },
+          {
+            "name": "INSTALLED_APPS",
+            "lineno": 33,
+            "value": "['django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessi"
+          },
+          {
+            "name": "MIDDLEWARE",
+            "lineno": 43,
+            "value": "['django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddlew"
+          },
+          {
+            "name": "ROOT_URLCONF",
+            "lineno": 54,
+            "value": "'Application.urls'"
+          },
+          {
+            "name": "TEMPLATES",
+            "lineno": 56,
+            "value": "[{'BACKEND': 'django.template.backends.django.DjangoTemplates', 'DIRS': [BASE_DIR / 'templates'], 'A"
+          },
+          {
+            "name": "WSGI_APPLICATION",
+            "lineno": 72,
+            "value": "'Application.wsgi.application'"
+          },
+          {
+            "name": "DATABASES",
+            "lineno": 78,
+            "value": "{'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'hackathon', 'USER': 'unknown', 'PASSWORD"
+          },
+          {
+            "name": "AUTH_PASSWORD_VALIDATORS",
+            "lineno": 93,
+            "value": "[{'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'}, {'NAME': 'dja"
+          },
+          {
+            "name": "LANGUAGE_CODE",
+            "lineno": 112,
+            "value": "'en-us'"
+          },
+          {
+            "name": "TIME_ZONE",
+            "lineno": 114,
+            "value": "'UTC'"
+          },
+          {
+            "name": "USE_I18N",
+            "lineno": 116,
+            "value": "True"
+          },
+          {
+            "name": "USE_TZ",
+            "lineno": 118,
+            "value": "True"
+          },
+          {
+            "name": "STATIC_URL",
+            "lineno": 124,
+            "value": "'/static/'"
+          },
+          {
+            "name": "STATICFILES_DIRS",
+            "lineno": 126,
+            "value": "[BASE_DIR / 'static']"
+          },
+          {
+            "name": "DEFAULT_AUTO_FIELD",
+            "lineno": 133,
+            "value": "'django.db.models.BigAutoField'"
+          },
+          {
+            "name": "STATIC_ROOT",
+            "lineno": 135,
+            "value": "BASE_DIR / 'staticfiles'"
           }
         ],
-        "constants": [],
         "module_level_code": true
       },
-      "s_tool\\driver.py": {
-        "file": "s_tool\\driver.py",
-        "docstring": "Create Driver instance",
+      "commercial\\urls.py": {
+        "file": "commercial\\urls.py",
+        "docstring": null,
         "imports": [
-          "from selenium import webdriver",
-          "from selenium.webdriver.chrome.service import Service as ChromeService",
-          "from selenium.webdriver.ie.service import Service as IEService",
-          "from webdriver_manager.chrome import ChromeDriverManager",
-          "from webdriver_manager.firefox import GeckoDriverManager",
-          "from webdriver_manager.microsoft import IEDriverManager"
+          "from django.contrib import admin",
+          "from django.urls import path, include"
+        ],
+        "functions": [],
+        "classes": [],
+        "constants": [],
+        "module_level_code": false
+      },
+      "commercial\\wsgi.py": {
+        "file": "commercial\\wsgi.py",
+        "docstring": "WSGI config for Application project.\n\nIt exposes the WSGI callable as a module-level variable named ``application``.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/",
+        "imports": [
+          "import os",
+          "from django.core.wsgi import get_wsgi_application"
+        ],
+        "functions": [],
+        "classes": [],
+        "constants": [],
+        "module_level_code": true
+      },
+      "myapp\\admin.py": {
+        "file": "myapp\\admin.py",
+        "docstring": null,
+        "imports": [
+          "from django.contrib import admin",
+          "from .models import BookFree, ContactSubmission"
+        ],
+        "functions": [],
+        "classes": [],
+        "constants": [],
+        "module_level_code": true
+      },
+      "myapp\\app.py": {
+        "file": "myapp\\app.py",
+        "docstring": null,
+        "imports": [
+          "from flask import Flask, render_template, request",
+          "import mysql.connector"
+        ],
+        "functions": [
+          {
+            "name": "payment",
+            "lineno": 16,
+            "end_lineno": 39,
+            "docstring": null,
+            "signature": "payment()",
+            "parameters": [],
+            "return_type": "Any",
+            "decorators": [
+              "app.route"
+            ],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 3
+          }
+        ],
+        "classes": [],
+        "constants": [],
+        "module_level_code": true
+      },
+      "myapp\\apps.py": {
+        "file": "myapp\\apps.py",
+        "docstring": null,
+        "imports": [
+          "from django.apps import AppConfig"
         ],
         "functions": [],
         "classes": [
           {
-            "name": "SeleniumDriver",
-            "lineno": 13,
-            "end_lineno": 77,
-            "docstring": "driver class",
-            "bases": [],
+            "name": "MyappConfig",
+            "lineno": 4,
+            "end_lineno": 6,
+            "docstring": null,
+            "bases": [
+              "AppConfig"
+            ],
             "decorators": [],
-            "methods": [
+            "methods": [],
+            "attributes": [
               {
-                "name": "__init__",
-                "lineno": 18,
-                "end_lineno": 21,
-                "docstring": null,
-                "signature": "__init__(self, browser = None, headless = False, executable_path = None)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "browser",
-                    "type": "Any",
-                    "default": "None",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "headless",
-                    "type": "Any",
-                    "default": "False",
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "executable_path",
-                    "type": "Any",
-                    "default": "None",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
+                "name": "default_auto_field",
+                "lineno": 5
               },
               {
-                "name": "load_driver",
-                "lineno": 23,
-                "end_lineno": 36,
-                "docstring": "Create and return webdriver instance",
-                "signature": "load_driver(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 4
-              },
-              {
-                "name": "get_chrome_driver",
-                "lineno": 38,
-                "end_lineno": 46,
-                "docstring": "Return chrome driver instance",
-                "signature": "get_chrome_driver(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "get_firefox_driver",
-                "lineno": 48,
-                "end_lineno": 55,
-                "docstring": "Return firefox driver instance",
-                "signature": "get_firefox_driver(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "get_ie_driver",
-                "lineno": 57,
-                "end_lineno": 64,
-                "docstring": "Return firefox driver instance",
-                "signature": "get_ie_driver(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "_get_chrome_options",
-                "lineno": 66,
-                "end_lineno": 69,
-                "docstring": null,
-                "signature": "_get_chrome_options(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
-              },
-              {
-                "name": "_get_firefox_options",
-                "lineno": 71,
-                "end_lineno": 74,
-                "docstring": null,
-                "signature": "_get_firefox_options(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
-              },
-              {
-                "name": "_get_ie_options",
-                "lineno": 76,
-                "end_lineno": 77,
-                "docstring": null,
-                "signature": "_get_ie_options(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
+                "name": "name",
+                "lineno": 6
               }
             ],
-            "attributes": [],
             "is_private": false
           }
         ],
         "constants": [],
-        "module_level_code": true
+        "module_level_code": false
       },
-      "s_tool\\exceptions.py": {
-        "file": "s_tool\\exceptions.py",
-        "docstring": "Exception classes",
-        "imports": [],
+      "myapp\\forms.py": {
+        "file": "myapp\\forms.py",
+        "docstring": null,
+        "imports": [
+          "from django import forms",
+          "from .models import ContactSubmission"
+        ],
         "functions": [],
         "classes": [
           {
-            "name": "InvalidWebDriverError",
-            "lineno": 7,
-            "end_lineno": 8,
-            "docstring": "Custom exception raised for an invalid WebDriver.",
+            "name": "ContactForm",
+            "lineno": 4,
+            "end_lineno": 7,
+            "docstring": null,
             "bases": [
-              "Exception"
+              "forms.ModelForm"
             ],
             "decorators": [],
             "methods": [],
             "attributes": [],
             "is_private": false
-          },
+          }
+        ],
+        "constants": [],
+        "module_level_code": false
+      },
+      "myapp\\models.py": {
+        "file": "myapp\\models.py",
+        "docstring": null,
+        "imports": [
+          "from django.db import models"
+        ],
+        "functions": [],
+        "classes": [
           {
-            "name": "SToolException",
-            "lineno": 11,
-            "end_lineno": 30,
-            "docstring": "Base Class for selenium tools Exceptions",
+            "name": "ContactSubmission",
+            "lineno": 4,
+            "end_lineno": 10,
+            "docstring": null,
             "bases": [
-              "Exception"
+              "models.Model"
             ],
             "decorators": [],
             "methods": [
               {
-                "name": "__init__",
-                "lineno": 16,
-                "end_lineno": 22,
-                "docstring": "[summary]\n\nArgs:\n    message ([str]): Exception message",
-                "signature": "__init__(self, message)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "message",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": true,
-                "complexity": 1
-              },
-              {
                 "name": "__str__",
-                "lineno": 24,
-                "end_lineno": 30,
-                "docstring": "Return Exception message\n\nReturns:\n    [str]: Exception",
+                "lineno": 9,
+                "end_lineno": 10,
+                "docstring": null,
                 "signature": "__str__(self)",
                 "parameters": [
                   {
@@ -1160,237 +470,38 @@
                 "complexity": 1
               }
             ],
-            "attributes": [],
-            "is_private": false
-          }
-        ],
-        "constants": [],
-        "module_level_code": true
-      },
-      "s_tool\\logger.py": {
-        "file": "s_tool\\logger.py",
-        "docstring": "Logging seleniumtoolkit",
-        "imports": [
-          "import logging"
-        ],
-        "functions": [],
-        "classes": [],
-        "constants": [],
-        "module_level_code": true
-      },
-      "s_tool\\parser.py": {
-        "file": "s_tool\\parser.py",
-        "docstring": "Parser utilities using lxml",
-        "imports": [
-          "from lxml.html import fromstring"
-        ],
-        "functions": [],
-        "classes": [
-          {
-            "name": "LxmlParser",
-            "lineno": 7,
-            "end_lineno": 49,
-            "docstring": "parse using response using lxml",
-            "bases": [],
-            "decorators": [],
-            "methods": [
+            "attributes": [
               {
-                "name": "dropdown",
-                "lineno": 12,
-                "end_lineno": 43,
-                "docstring": "Parse a dropdown from an HTML string and return the options as a\nlist of tuples containing key-value pairs.\n\nArgs:\n    html_string: str\n        - The HTML string containing the dropdown element.\n    text_exclude:list, optional\n        - A list of values to exclude from the result.\n        - Defaults to None.\n\nReturns:\n    result: list\n        - A list of tuples containing key-value pairs of the dropdown options.",
-                "signature": "dropdown(self, html_string, text_exclude = None)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "html_string",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "text_exclude",
-                    "type": "Any",
-                    "default": "None",
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 5
+                "name": "name",
+                "lineno": 5
               },
               {
-                "name": "table",
-                "lineno": 45,
-                "end_lineno": 49,
-                "docstring": "Write your own custom parser class",
-                "signature": "table(self, html_string)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "html_string",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              }
-            ],
-            "attributes": [],
-            "is_private": false
-          }
-        ],
-        "constants": [],
-        "module_level_code": true
-      },
-      "s_tool\\__init__.py": {
-        "file": "s_tool\\__init__.py",
-        "docstring": "Package s-tool.\n\nSelenium wrapper to make your life easy.\n\nMIT License\n\nCopyright (c) 2021 Python World",
-        "imports": [
-          "from importlib.metadata import version"
-        ],
-        "functions": [],
-        "classes": [],
-        "constants": [],
-        "module_level_code": true
-      },
-      "tests\\test_core.py": {
-        "file": "tests\\test_core.py",
-        "docstring": null,
-        "imports": [
-          "import os",
-          "import unittest",
-          "from selenium import webdriver",
-          "from selenium.webdriver.chrome.options import Options",
-          "from selenium.webdriver.chrome.service import Service as ChromeService",
-          "from selenium.webdriver.common.by import By",
-          "from selenium.webdriver.remote.webelement import WebElement",
-          "from webdriver_manager.chrome import ChromeDriverManager",
-          "from s_tool.core import SeleniumTools"
-        ],
-        "functions": [],
-        "classes": [
-          {
-            "name": "LXMLParser",
-            "lineno": 15,
-            "end_lineno": 20,
-            "docstring": null,
-            "bases": [],
-            "decorators": [],
-            "methods": [
+                "name": "email",
+                "lineno": 6
+              },
               {
-                "name": "link",
-                "lineno": 16,
-                "end_lineno": 20,
-                "docstring": null,
-                "signature": "link(self, html_string, **kwargs)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "html_string",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  },
-                  {
-                    "name": "**kwargs",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "var_keyword"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
+                "name": "message",
+                "lineno": 7
               }
             ],
-            "attributes": [],
             "is_private": false
           },
           {
-            "name": "SeleniumToolsTestCase",
-            "lineno": 23,
-            "end_lineno": 148,
+            "name": "BookFree",
+            "lineno": 12,
+            "end_lineno": 17,
             "docstring": null,
             "bases": [
-              "unittest.TestCase"
+              "models.Model"
             ],
             "decorators": [],
             "methods": [
               {
-                "name": "setUpClass",
-                "lineno": 26,
-                "end_lineno": 35,
+                "name": "__str__",
+                "lineno": 16,
+                "end_lineno": 17,
                 "docstring": null,
-                "signature": "setUpClass(cls)",
-                "parameters": [
-                  {
-                    "name": "cls",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [
-                  "classmethod"
-                ],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "tearDownClass",
-                "lineno": 39,
-                "end_lineno": 40,
-                "docstring": null,
-                "signature": "tearDownClass(cls)",
-                "parameters": [
-                  {
-                    "name": "cls",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [
-                  "classmethod"
-                ],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_get_supported_browsers",
-                "lineno": 42,
-                "end_lineno": 45,
-                "docstring": null,
-                "signature": "test_get_supported_browsers(self)",
+                "signature": "__str__(self)",
                 "parameters": [
                   {
                     "name": "self",
@@ -1402,562 +513,852 @@
                 "return_type": "Any",
                 "decorators": [],
                 "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_sessionid",
-                "lineno": 47,
-                "end_lineno": 50,
-                "docstring": null,
-                "signature": "test_sessionid(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_get",
-                "lineno": 52,
-                "end_lineno": 55,
-                "docstring": null,
-                "signature": "test_get(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_get_local_file",
-                "lineno": 57,
-                "end_lineno": 61,
-                "docstring": null,
-                "signature": "test_get_local_file(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_get_html_content",
-                "lineno": 63,
-                "end_lineno": 67,
-                "docstring": null,
-                "signature": "test_get_html_content(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_parse",
-                "lineno": 69,
-                "end_lineno": 73,
-                "docstring": null,
-                "signature": "test_parse(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_url",
-                "lineno": 77,
-                "end_lineno": 79,
-                "docstring": null,
-                "signature": "test_url(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_text",
-                "lineno": 81,
-                "end_lineno": 83,
-                "docstring": null,
-                "signature": "test_text(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_execute_js",
-                "lineno": 85,
-                "end_lineno": 87,
-                "docstring": null,
-                "signature": "test_execute_js(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_get_locator",
-                "lineno": 89,
-                "end_lineno": 96,
-                "docstring": null,
-                "signature": "test_get_locator(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_click",
-                "lineno": 98,
-                "end_lineno": 104,
-                "docstring": null,
-                "signature": "test_click(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_get_element",
-                "lineno": 106,
-                "end_lineno": 110,
-                "docstring": null,
-                "signature": "test_get_element(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_press_multiple_keys",
-                "lineno": 113,
-                "end_lineno": 115,
-                "docstring": null,
-                "signature": "test_press_multiple_keys(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_cookies",
-                "lineno": 118,
-                "end_lineno": 120,
-                "docstring": null,
-                "signature": "test_cookies(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_set_cookies",
-                "lineno": 123,
-                "end_lineno": 130,
-                "docstring": null,
-                "signature": "test_set_cookies(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
-              },
-              {
-                "name": "test_wait_for_element",
-                "lineno": 132,
-                "end_lineno": 136,
-                "docstring": null,
-                "signature": "test_wait_for_element(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 2
-              },
-              {
-                "name": "test_element_visibility",
-                "lineno": 138,
-                "end_lineno": 148,
-                "docstring": null,
-                "signature": "test_element_visibility(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
+                "is_private": true,
                 "complexity": 1
               }
             ],
-            "attributes": [],
-            "is_private": false
-          }
-        ],
-        "constants": [],
-        "module_level_code": true
-      },
-      "tests\\test_parser.py": {
-        "file": "tests\\test_parser.py",
-        "docstring": null,
-        "imports": [
-          "import unittest",
-          "from s_tool.parser import LxmlParser"
-        ],
-        "functions": [],
-        "classes": [
-          {
-            "name": "LxmlParserTestCase",
-            "lineno": 7,
-            "end_lineno": 28,
-            "docstring": null,
-            "bases": [
-              "unittest.TestCase"
-            ],
-            "decorators": [],
-            "methods": [
+            "attributes": [
               {
-                "name": "setUpClass",
-                "lineno": 9,
-                "end_lineno": 10,
-                "docstring": null,
-                "signature": "setUpClass(cls)",
-                "parameters": [
-                  {
-                    "name": "cls",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [
-                  "classmethod"
-                ],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
+                "name": "full_name",
+                "lineno": 13
               },
               {
-                "name": "test_dropdown",
-                "lineno": 12,
-                "end_lineno": 28,
-                "docstring": null,
-                "signature": "test_dropdown(self)",
-                "parameters": [
-                  {
-                    "name": "self",
-                    "type": "Any",
-                    "default": null,
-                    "kind": "positional"
-                  }
-                ],
-                "return_type": "Any",
-                "decorators": [],
-                "is_async": false,
-                "is_private": false,
-                "complexity": 1
+                "name": "email",
+                "lineno": 14
               }
             ],
-            "attributes": [],
             "is_private": false
           }
         ],
         "constants": [],
         "module_level_code": false
       },
-      "tests\\test_version.py": {
-        "file": "tests\\test_version.py",
+      "myapp\\urls.py": {
+        "file": "myapp\\urls.py",
         "docstring": null,
         "imports": [
-          "from s_tool import __version__"
+          "from django.urls import path",
+          "from . import views"
+        ],
+        "functions": [],
+        "classes": [],
+        "constants": [],
+        "module_level_code": false
+      },
+      "myapp\\views.py": {
+        "file": "myapp\\views.py",
+        "docstring": null,
+        "imports": [
+          "from django.shortcuts import render, HttpResponse, redirect",
+          "from .forms import ContactForm",
+          "from .models import BookFree",
+          "from django.contrib.auth import authenticate, login",
+          "from django.contrib.auth.forms import AuthenticationForm",
+          "from django.db import connection as conn"
         ],
         "functions": [
           {
-            "name": "test_version",
-            "lineno": 4,
-            "end_lineno": 8,
-            "docstring": "A dummy test, for setting up pytest, tox, and test on ci\nwill remove it after writing real test cases",
-            "signature": "test_version()",
-            "parameters": [],
+            "name": "Index",
+            "lineno": 9,
+            "end_lineno": 10,
+            "docstring": null,
+            "signature": "Index(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
             "return_type": "Any",
             "decorators": [],
             "is_async": false,
             "is_private": false,
             "complexity": 1
+          },
+          {
+            "name": "Home",
+            "lineno": 12,
+            "end_lineno": 13,
+            "docstring": null,
+            "signature": "Home(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "About",
+            "lineno": 15,
+            "end_lineno": 16,
+            "docstring": null,
+            "signature": "About(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "Salary_based_attendance",
+            "lineno": 18,
+            "end_lineno": 19,
+            "docstring": null,
+            "signature": "Salary_based_attendance(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "AssignTask",
+            "lineno": 21,
+            "end_lineno": 22,
+            "docstring": null,
+            "signature": "AssignTask(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "LeaveManage",
+            "lineno": 24,
+            "end_lineno": 25,
+            "docstring": null,
+            "signature": "LeaveManage(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "AttendanceManage",
+            "lineno": 27,
+            "end_lineno": 28,
+            "docstring": null,
+            "signature": "AttendanceManage(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "Contact",
+            "lineno": 30,
+            "end_lineno": 31,
+            "docstring": null,
+            "signature": "Contact(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "Freedemo",
+            "lineno": 33,
+            "end_lineno": 34,
+            "docstring": null,
+            "signature": "Freedemo(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "CongratsFree",
+            "lineno": 36,
+            "end_lineno": 37,
+            "docstring": null,
+            "signature": "CongratsFree(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "bookfree",
+            "lineno": 39,
+            "end_lineno": 57,
+            "docstring": null,
+            "signature": "bookfree(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 4
+          },
+          {
+            "name": "trynow",
+            "lineno": 58,
+            "end_lineno": 67,
+            "docstring": null,
+            "signature": "trynow(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 2
+          },
+          {
+            "name": "Payment",
+            "lineno": 69,
+            "end_lineno": 74,
+            "docstring": null,
+            "signature": "Payment(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 2
+          },
+          {
+            "name": "success_page",
+            "lineno": 76,
+            "end_lineno": 77,
+            "docstring": null,
+            "signature": "success_page(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "contact_form",
+            "lineno": 79,
+            "end_lineno": 88,
+            "docstring": null,
+            "signature": "contact_form(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 3
+          },
+          {
+            "name": "success_page",
+            "lineno": 90,
+            "end_lineno": 91,
+            "docstring": null,
+            "signature": "success_page(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "login_view",
+            "lineno": 93,
+            "end_lineno": 106,
+            "docstring": null,
+            "signature": "login_view(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 4
           }
         ],
         "classes": [],
         "constants": [],
         "module_level_code": false
+      },
+      "myapp\\migrations\\0001_initial.py": {
+        "file": "myapp\\migrations\\0001_initial.py",
+        "docstring": null,
+        "imports": [
+          "from django.db import migrations, models"
+        ],
+        "functions": [],
+        "classes": [
+          {
+            "name": "Migration",
+            "lineno": 6,
+            "end_lineno": 23,
+            "docstring": null,
+            "bases": [
+              "migrations.Migration"
+            ],
+            "decorators": [],
+            "methods": [],
+            "attributes": [
+              {
+                "name": "initial",
+                "lineno": 8
+              },
+              {
+                "name": "dependencies",
+                "lineno": 10
+              },
+              {
+                "name": "operations",
+                "lineno": 13
+              }
+            ],
+            "is_private": false
+          }
+        ],
+        "constants": [],
+        "module_level_code": false
+      },
+      "myapp\\migrations\\0002_bookfree.py": {
+        "file": "myapp\\migrations\\0002_bookfree.py",
+        "docstring": null,
+        "imports": [
+          "from django.db import migrations, models"
+        ],
+        "functions": [],
+        "classes": [
+          {
+            "name": "Migration",
+            "lineno": 6,
+            "end_lineno": 21,
+            "docstring": null,
+            "bases": [
+              "migrations.Migration"
+            ],
+            "decorators": [],
+            "methods": [],
+            "attributes": [
+              {
+                "name": "dependencies",
+                "lineno": 8
+              },
+              {
+                "name": "operations",
+                "lineno": 12
+              }
+            ],
+            "is_private": false
+          }
+        ],
+        "constants": [],
+        "module_level_code": false
       }
     },
     "dependency_graph": {
-      "docs\\conf.py": {
-        "imports": [
-          "s_tool"
-        ],
+      "manage.py": {
+        "imports": [],
         "imported_by": [],
         "external_deps": [
+          "django.core.management",
           "os",
           "sys"
         ]
       },
-      "s_tool\\core.py": {
-        "imports": [
-          "exceptions",
-          "logger",
-          "driver",
-          "parser"
-        ],
+      "commercial\\asgi.py": {
+        "imports": [],
         "imported_by": [],
         "external_deps": [
-          "inspect",
-          "typing",
-          "selenium.common.exceptions",
-          "selenium.webdriver.common.by",
-          "types",
-          "selenium.webdriver.support",
-          "selenium.webdriver.common.action_chains",
-          "string",
-          "selenium",
-          "selenium.webdriver.common.keys",
-          "selenium.webdriver.remote.webelement",
           "os",
-          "selenium.webdriver.support.ui",
-          "urllib.parse",
-          "selenium.webdriver.support.select"
+          "django.core.asgi"
         ]
       },
-      "s_tool\\driver.py": {
+      "commercial\\settings.py": {
         "imports": [],
         "imported_by": [],
         "external_deps": [
-          "selenium",
-          "selenium.webdriver.chrome.service",
-          "webdriver_manager.firefox",
-          "selenium.webdriver.ie.service",
-          "webdriver_manager.microsoft",
-          "webdriver_manager.chrome"
+          "pathlib"
         ]
       },
-      "s_tool\\exceptions.py": {
-        "imports": [],
-        "imported_by": [],
-        "external_deps": []
-      },
-      "s_tool\\logger.py": {
+      "commercial\\urls.py": {
         "imports": [],
         "imported_by": [],
         "external_deps": [
-          "logging"
+          "django.contrib",
+          "django.urls"
         ]
       },
-      "s_tool\\parser.py": {
+      "commercial\\wsgi.py": {
         "imports": [],
         "imported_by": [],
         "external_deps": [
-          "lxml.html"
-        ]
-      },
-      "s_tool\\__init__.py": {
-        "imports": [],
-        "imported_by": [],
-        "external_deps": [
-          "importlib.metadata"
-        ]
-      },
-      "tests\\test_core.py": {
-        "imports": [
-          "s_tool.core"
-        ],
-        "imported_by": [],
-        "external_deps": [
-          "selenium.webdriver.chrome.options",
-          "selenium",
-          "selenium.webdriver.chrome.service",
           "os",
-          "unittest",
-          "selenium.webdriver.remote.webelement",
-          "selenium.webdriver.common.by",
-          "lxml.html",
-          "webdriver_manager.chrome"
+          "django.core.wsgi"
         ]
       },
-      "tests\\test_parser.py": {
+      "myapp\\admin.py": {
         "imports": [
-          "s_tool.parser"
+          "models"
         ],
         "imported_by": [],
         "external_deps": [
-          "unittest"
+          "django.contrib"
         ]
       },
-      "tests\\test_version.py": {
+      "myapp\\app.py": {
+        "imports": [],
+        "imported_by": [],
+        "external_deps": [
+          "mysql.connector",
+          "flask"
+        ]
+      },
+      "myapp\\apps.py": {
+        "imports": [],
+        "imported_by": [],
+        "external_deps": [
+          "django.apps"
+        ]
+      },
+      "myapp\\forms.py": {
         "imports": [
-          "s_tool"
+          "models"
         ],
         "imported_by": [],
-        "external_deps": []
+        "external_deps": [
+          "django"
+        ]
+      },
+      "myapp\\models.py": {
+        "imports": [],
+        "imported_by": [],
+        "external_deps": [
+          "django.db"
+        ]
+      },
+      "myapp\\urls.py": {
+        "imports": [],
+        "imported_by": [],
+        "external_deps": [
+          "django.urls"
+        ]
+      },
+      "myapp\\views.py": {
+        "imports": [
+          "forms",
+          "models"
+        ],
+        "imported_by": [],
+        "external_deps": [
+          "django.shortcuts",
+          "django.db",
+          "django.contrib.auth.forms",
+          "django.contrib.auth"
+        ]
+      },
+      "myapp\\migrations\\0001_initial.py": {
+        "imports": [],
+        "imported_by": [],
+        "external_deps": [
+          "django.db"
+        ]
+      },
+      "myapp\\migrations\\0002_bookfree.py": {
+        "imports": [],
+        "imported_by": [],
+        "external_deps": [
+          "django.db"
+        ]
       }
     },
+    "adjacency_matrix": {
+      "modules": [
+        "commercial\\asgi.py",
+        "commercial\\settings.py",
+        "commercial\\urls.py",
+        "commercial\\wsgi.py",
+        "manage.py",
+        "myapp\\admin.py",
+        "myapp\\app.py",
+        "myapp\\apps.py",
+        "myapp\\forms.py",
+        "myapp\\migrations\\0001_initial.py",
+        "myapp\\migrations\\0002_bookfree.py",
+        "myapp\\models.py",
+        "myapp\\urls.py",
+        "myapp\\views.py"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "total_dependencies": 0,
+      "module_count": 14
+    },
+    "matrix_csv": ",commercial\\asgi.py,commercial\\settings.py,commercial\\urls.py,commercial\\wsgi.py,manage.py,myapp\\admin.py,myapp\\app.py,myapp\\apps.py,myapp\\forms.py,myapp\\migrations\\0001_initial.py,myapp\\migrations\\0002_bookfree.py,myapp\\models.py,myapp\\urls.py,myapp\\views.py\ncommercial\\asgi.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\ncommercial\\settings.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\ncommercial\\urls.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\ncommercial\\wsgi.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmanage.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\admin.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\app.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\apps.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\forms.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\migrations\\0001_initial.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\migrations\\0002_bookfree.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\models.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\urls.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\nmyapp\\views.py,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n",
     "complexity_metrics": {
-      "total_files": 10,
+      "total_files": 14,
       "files_by_language": {
-        "python": 10
+        "python": 14
       },
-      "total_lines": 1306,
-      "average_file_size": 4215.1,
+      "total_lines": 450,
+      "average_file_size": 977.5,
       "circular_dependencies": []
     },
     "architecture": {
       "core_modules": [
-        "docs\\conf.py",
-        "s_tool\\core.py",
-        "s_tool\\driver.py",
-        "s_tool\\exceptions.py",
-        "s_tool\\logger.py",
-        "s_tool\\parser.py",
-        "s_tool\\__init__.py",
-        "tests\\test_core.py",
-        "tests\\test_parser.py",
-        "tests\\test_version.py"
+        "manage.py",
+        "commercial\\asgi.py",
+        "commercial\\settings.py",
+        "commercial\\urls.py",
+        "commercial\\wsgi.py",
+        "myapp\\admin.py",
+        "myapp\\app.py",
+        "myapp\\apps.py",
+        "myapp\\forms.py",
+        "myapp\\models.py"
       ],
       "design_patterns": {
         "factory": [],
@@ -1965,34 +1366,1061 @@
         "observer": []
       },
       "entry_points": [
-        "docs\\conf.py",
-        "s_tool\\core.py",
-        "s_tool\\driver.py",
-        "s_tool\\exceptions.py",
-        "s_tool\\logger.py",
-        "s_tool\\parser.py",
-        "s_tool\\__init__.py",
-        "tests\\test_core.py",
-        "tests\\test_parser.py",
-        "tests\\test_version.py"
+        "manage.py",
+        "commercial\\asgi.py",
+        "commercial\\settings.py",
+        "commercial\\urls.py",
+        "commercial\\wsgi.py",
+        "myapp\\admin.py",
+        "myapp\\app.py",
+        "myapp\\apps.py",
+        "myapp\\forms.py",
+        "myapp\\models.py",
+        "myapp\\urls.py",
+        "myapp\\views.py",
+        "myapp\\migrations\\0001_initial.py",
+        "myapp\\migrations\\0002_bookfree.py"
       ],
       "layers": {
-        "presentation": [],
+        "presentation": [
+          "myapp\\views.py"
+        ],
         "business": [],
-        "data": [],
+        "data": [
+          "myapp\\models.py"
+        ],
         "utility": [
-          "docs\\conf.py",
-          "s_tool\\core.py",
-          "s_tool\\driver.py",
-          "s_tool\\exceptions.py",
-          "s_tool\\logger.py",
-          "s_tool\\parser.py",
-          "s_tool\\__init__.py",
-          "tests\\test_core.py",
-          "tests\\test_parser.py",
-          "tests\\test_version.py"
+          "manage.py",
+          "commercial\\asgi.py",
+          "commercial\\settings.py",
+          "commercial\\urls.py",
+          "commercial\\wsgi.py",
+          "myapp\\admin.py",
+          "myapp\\app.py",
+          "myapp\\apps.py",
+          "myapp\\forms.py",
+          "myapp\\urls.py",
+          "myapp\\migrations\\0001_initial.py",
+          "myapp\\migrations\\0002_bookfree.py"
         ]
       }
+    },
+    "llm_analysis": {
+      "llm_analysis": "**Core Architectural Components and their Responsibilities:**\n\n1. **Manage.py**: Entry point for management commands (e.g., migrations, runserver).\n2. **Myapp**: The main application module containing the business logic and models.\n\t* **App.py**: Initializes the application and sets up the ASGI and WSGI configurations.\n\t* **Apps.py**: Defines the application configuration using Django's AppConfig.\n\t* **Models.py**: Defines the application's data models.\n\t* **Forms.py**: Defines forms for user input and validation.\n3. **Commercial**: A separate module for commercial-related settings and configurations (e.g., ASGI, WSGI).\n\n**Main Design Patterns Used:**\n\n1. **Modularization**: Each module has a specific responsibility, promoting a clear separation of concerns.\n2. **Dependency Injection**: The application is configured using Django's AppConfig and WSGI/ASGI configurations.\n3. **Model-View-Controller (MVC)**: Although not strictly adhered to, the application's organization resembles an MVC structure.\n\n**Data Flow and Information Flow between Modules:**\n\n1. **Manage.py**: Runs management commands, which interact with the application's models and configurations.\n2. **Myapp**: The application's business logic and models are defined in this module. The app.py module initializes the application and sets up the ASGI and WSGI configurations.\n3. **Commercial**: This module contains commercial-related settings and configurations.\n\n**Potential Architectural Improvements:**\n\n1. **Refactor commercial module**: Consider merging or removing the commercial module, as it does not seem to be used in the current implementation.\n2. **Improve code organization**: Organize code using a consistent structure (e.g., packages, submodules).\n3. **Add documentation**: Include docstrings and comments to explain the code's purpose and functionality.\n\n**Risk Areas and Technical Debt Indicators:**\n\n1. **Unclear responsibilities**: Some modules (e.g., commercial) have unclear responsibilities or are not used in the current implementation.\n2. **Overuse of global imports**: Some modules import global modules, which can lead to tight coupling and make the code harder to maintain.\n3. **Flask dependency**: The presence of Flask, which is not used in the current implementation, might indicate technical debt or an abandoned project.",
+      "code_summary": "CODE STRUCTURE SUMMARY:\n\nMODULES:\n- manage.py: 1 functions, 0 classes\n- commercial\\asgi.py: 0 functions, 0 classes\n- commercial\\settings.py: 0 functions, 0 classes\n- commercial\\urls.py: 0 functions, 0 classes\n- commercial\\wsgi.py: 0 functions, 0 classes\n- myapp\\admin.py: 0 functions, 0 classes\n- myapp\\app.py: 1 functions, 0 classes\n- myapp\\apps.py: 0 functions, 1 classes\n- myapp\\forms.py: 0 functions, 1 classes\n- myapp\\models.py: 0 functions, 2 classes\n\nKEY DEPENDENCIES:\n- manage.py: imported by 0 modules\n- commercial\\asgi.py: imported by 0 modules\n- commercial\\settings.py: imported by 0 modules\n- commercial\\urls.py: imported by 0 modules\n- commercial\\wsgi.py: imported by 0 modules\n\nEXTERNAL DEPENDENCIES:\n- django\n- django.core.management\n- django.apps\n- django.core.asgi\n- django.db\n- django.shortcuts\n- django.contrib.auth.forms\n- mysql.connector\n- django.contrib.auth\n- pathlib\n- django.urls\n- django.core.wsgi\n- sys\n- django.contrib\n- os\n- flask\n",
+      "analysis_timestamp": "2026-01-26T16:45:31.050661",
+      "model": "meta-llama/Meta-Llama-3.1-8B-Instruct"
+    }
+  },
+  "phase3": {
+    "documentation_by_module": {
+      "manage.py": {
+        "file": "manage.py",
+        "docstring": "Django's command-line utility for administrative tasks.",
+        "functions": [
+          {
+            "name": "main",
+            "lineno": 7,
+            "end_lineno": 18,
+            "docstring": "Run administrative tasks.",
+            "signature": "main()",
+            "parameters": [],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 2
+          }
+        ],
+        "classes": [],
+        "imports": [
+          "import os",
+          "import sys"
+        ],
+        "generated_documentation": "## File Purpose\nThe `manage.py` file is Django's command-line utility for administrative tasks. It provides a simple interface to manage and interact with a Django project.\n\n## Key Functions\n### main\n#### Function name: Entry point of the manage.py script\n#### Parameters:\n- `argv`: list of command-line arguments (str)\n- `settings`: path to the project settings file (str)\n#### Returns:\n- None\n#### Example usage:\n```bash\npython manage.py runserver\n```\nThis will start the Django development server.\n\n## Dependencies\n- **os**: Provides a way to use operating system dependent functionality.\n- **sys**: Provides information about the Python interpreter and its environment.\n- **django.core.management**: Provides the core functionality for the manage.py script.\n\n## Usage Examples\n### 1. Run the Django development server\n```bash\npython manage.py runserver\n```\nThis will start the Django development server and make it available at `http://localhost:8000`.\n\n### 2. Create a new Django app\n```bash\npython manage.py startapp myapp\n```\nThis will create a new Django app named `myapp` in the current directory.\n\n### 3. Migrate the database\n```bash\npython manage.py migrate\n```\nThis will apply any pending migrations to the database.\n\n## Design Patterns\n- **Command Pattern**: The `main` function acts as a command processor, receiving command-line arguments and executing the corresponding actions.\n- **Factory Pattern**: The `django.core.management` module provides a factory for creating management commands, which are then executed by the `main` function.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "import os",
+            "import sys"
+          ],
+          "functions": [
+            "main"
+          ],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:45:35.932906"
+      },
+      "commercial\\asgi.py": {
+        "file": "commercial\\asgi.py",
+        "docstring": "ASGI config for Application project.\n\nIt exposes the ASGI callable as a module-level variable named ``application``.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/howto/deployment/asgi/",
+        "functions": [],
+        "classes": [],
+        "imports": [
+          "import os",
+          "from django.core.asgi import get_asgi_application"
+        ],
+        "generated_documentation": "## File Purpose\n### commercial\\asgi.py\nThis module serves as the ASGI (Asynchronous Server Gateway Interface) configuration for the Application project. Its primary purpose is to expose the ASGI callable as a module-level variable named `application`. This allows the project to be deployed on ASGI-compatible servers.\n\n## Key Functions\n### None\n\nSince there are no functions in this module, we will focus on the main application configuration.\n\n## Main Application Configuration\n### application\n- **Parameters**: None\n- **Returns**: The ASGI callable application instance.\n- **Example usage**:\n  ```python\nimport os\nfrom django.core.asgi import get_asgi_application\n\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Application.settings')\n\napplication = get_asgi_application()\n```\n  This example demonstrates how to set the `DJANGO_SETTINGS_MODULE` environment variable and obtain the ASGI application instance using `get_asgi_application()`.\n\n## Dependencies\n### External Dependencies\n- **django**: The Django framework is required for this module to function.\n- **django.core.asgi**: The `get_asgi_application()` function is imported from this module.\n\n### Internal Dependencies\n- **os**: The `os` module is used to set environment variables.\n\n## Usage Examples\n### 1. Basic Deployment\nTo deploy the Application project on an ASGI-compatible server, simply import and use the `application` instance:\n```python\nimport os\nfrom django.core.asgi import get_asgi_application\n\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Application.settings')\n\napplication = get_asgi_application()\n\n# Serve the application on an ASGI server\n```\n### 2. Customizing Environment Variables\nTo customize the environment variables used by the application, modify the `os.environ.setdefault()` call:\n```python\nimport os\nfrom django.core.asgi import get_asgi_application\n\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CustomSettings.settings')\n\napplication = get_asgi_application()\n```\n### 3. Integrating with Other ASGI Applications\nTo integrate this application with other ASGI applications, use the `application` instance as a middleware:\n```python\nimport os\nfrom django.core.asgi import get_asgi_application\nfrom another_app import another_application\n\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Application.settings')\n\napplication = get_asgi_application()\n\n# Use the application instance as a middleware\nasync def middleware(request):\n    # Process the request\n    return await another_application(request)\n\n# Serve the application on an",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "import os",
+            "from django.core.asgi import get_asgi_application"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:45:42.752461"
+      },
+      "commercial\\settings.py": {
+        "file": "commercial\\settings.py",
+        "docstring": "Django settings for Application project.\n\nGenerated by 'django-admin startproject' using Django 4.2.5.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/topics/settings/\n\nFor the full list of settings and their values, see\nhttps://docs.djangoproject.com/en/4.2/ref/settings/",
+        "functions": [],
+        "classes": [],
+        "imports": [
+          "from pathlib import Path"
+        ],
+        "generated_documentation": "## File Purpose\nThe `commercial\\settings.py` file is a Django settings file for the Application project. It is generated by 'django-admin startproject' using Django 4.2.5. This file contains project-wide settings and configurations.\n\n## Key Functions\nSince there are no functions in this module, we will focus on explaining the settings and their purpose.\n\n### Settings\n- **DATABASES**: Configuration for database connections.\n  - Parameters: `default` (dict), `default ENGINE` (str), `default NAME` (str), `default USER` (str), `default PASSWORD` (str), `default HOST` (str), `default PORT` (int)\n  - Returns: A dictionary containing database connection settings.\n  - Example usage: `DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3'}}`\n\n- **SECRET_KEY**: A secret key used for cryptographic purposes.\n  - Parameters: `SECRET_KEY` (str)\n  - Returns: A secret key string.\n  - Example usage: `SECRET_KEY = 'your_secret_key_here'`\n\n- **DEBUG**: A boolean indicating whether the project is in debug mode.\n  - Parameters: `DEBUG` (bool)\n  - Returns: A boolean value.\n  - Example usage: `DEBUG = True`\n\n- **ALLOWED_HOSTS**: A list of allowed hostnames.\n  - Parameters: `ALLOWED_HOSTS` (list)\n  - Returns: A list of allowed hostnames.\n  - Example usage: `ALLOWED_HOSTS = ['localhost', '127.0.0.1']`\n\n- **INSTALLED_APPS`: A list of installed Django apps.\n  - Parameters: `INSTALLED_APPS` (list)\n  - Returns: A list of installed Django apps.\n  - Example usage: `INSTALLED_APPS = ['django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles']`\n\n## Key Classes\nNo classes are defined in this module.\n\n## Dependencies\n- **Django**: The Django framework is used for building the web application.\n- **pathlib**: The `pathlib` module is used for working with file paths.\n\n## Usage Examples\nHere are a few examples of how to use this module:\n\n1.  **Configuring database connections**: You can configure the database connection settings in the `DATABASES` setting.\n    ```python\nDATABASE",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from pathlib import Path"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:45:51.733727"
+      },
+      "commercial\\urls.py": {
+        "file": "commercial\\urls.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [],
+        "imports": [
+          "from django.contrib import admin",
+          "from django.urls import path, include"
+        ],
+        "generated_documentation": "## File Purpose\nThe commercial\\urls.py file is a Django URL configuration module responsible for mapping URLs to views in the commercial application. It exists to provide a centralized location for defining URL patterns, making it easier to manage and maintain the application's routing.\n\n## Key Functions\n### None (Note: This module does not contain any functions)\n\n## Key Classes\n### None (Note: This module does not contain any classes)\n\n## Dependencies\n- **Django**: The commercial\\urls.py module depends on the Django framework for its functionality.\n- **django.contrib.admin**: This module is imported to provide administrative functionality.\n- **django.urls**: The module imports path and include from django.urls to define URL patterns.\n\n## Usage Examples\n### Example 1: Defining a URL Pattern\n```python\nfrom django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('commercial/', views.CommercialView.as_view(), name='commercial'),\n]\n```\n### Example 2: Including Other URL Configurations\n```python\nfrom django.urls import include\n\nurlpatterns = [\n    path('commercial/', include('commercial.urls')),\n]\n```\n### Example 3: Using URL Patterns in Views\n```python\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\ndef commercial_view(request):\n    url = reverse('commercial')\n    return render(request, 'commercial.html', {'url': url})\n```\n## Design Patterns\n- **Modularity**: The commercial\\urls.py module follows the modularity principle by separating URL configuration into a single file, making it easier to maintain and extend.\n- **Dependency Inversion**: The module depends on Django and other external dependencies, following the dependency inversion principle by inverting the control flow.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.contrib import admin",
+            "from django.urls import path, include"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:45:57.294052"
+      },
+      "commercial\\wsgi.py": {
+        "file": "commercial\\wsgi.py",
+        "docstring": "WSGI config for Application project.\n\nIt exposes the WSGI callable as a module-level variable named ``application``.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/",
+        "functions": [],
+        "classes": [],
+        "imports": [
+          "import os",
+          "from django.core.wsgi import get_wsgi_application"
+        ],
+        "generated_documentation": "## File Purpose\n### commercial\\wsgi.py\nThis module is responsible for configuring the WSGI (Web Server Gateway Interface) for the Application project. It exposes the WSGI callable as a module-level variable named `application`, making it accessible to web servers.\n\n## Key Functions\n### None (This module does not contain any functions)\n\n## Key Classes\n### None (This module does not contain any classes)\n\n## Dependencies\n### External Dependencies\n- **Django**: A high-level Python web framework that provides an environment for developing web applications.\n- **os**: A built-in Python module for interacting with the operating system.\n\n### Internal Dependencies\n- **django.core.wsgi**: A Django module that provides the `get_wsgi_application()` function for creating a WSGI application.\n\n## Usage Examples\n### Example 1: Running the Application\n```python\n# wsgi.py\nimport os\nfrom django.core.wsgi import get_wsgi_application\n\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Application.settings')\n\napplication = get_wsgi_application()\n```\n\n### Example 2: Serving the Application with Gunicorn\n```bash\n# Run the application with Gunicorn\ngunicorn --workers 3 --bind 0.0.0.0:8000 Application.wsgi.application\n```\n\n### Example 3: Serving the Application with Nginx\n```bash\n# Configure Nginx to serve the application\nserver {\n    listen 80;\n    server_name example.com;\n\n    location / {\n        proxy_pass http://localhost:8000;\n        proxy_set_header Host $host;\n        proxy_set_header X-Real-IP $remote_addr;\n    }\n}\n```\n\n## Design Patterns\n### None (No specific design patterns are used in this module)\n\nHowever, this module does follow the **Adapter Pattern** by using the `get_wsgi_application()` function from Django to create a WSGI application that can be used with various web servers.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "import os",
+            "from django.core.wsgi import get_wsgi_application"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:46:03.451696"
+      },
+      "myapp\\admin.py": {
+        "file": "myapp\\admin.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [],
+        "imports": [
+          "from django.contrib import admin",
+          "from .models import BookFree, ContactSubmission"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\admin.py` file is responsible for configuring the Django admin interface for the `myapp` application. It imports necessary modules and classes to enable admin functionality for specific models.\n\n## Key Functions\n### None (Note: No functions are defined in this module)\n\n## Key Classes\n### None (Note: No classes are defined in this module)\n\n## Dependencies\n- **Django**: The `django.contrib.admin` module is used to configure the admin interface.\n- **`myapp.models`**: The `BookFree` and `ContactSubmission` models are imported from the `myapp.models` module to enable admin functionality for these models.\n\n## Usage Examples\n### Example 1: Registering a Model in the Admin Interface\n```python\nfrom django.contrib import admin\nfrom .models import BookFree\n\nadmin.site.register(BookFree)\n```\n### Example 2: Customizing the Admin Interface for a Model\n```python\nfrom django.contrib import admin\nfrom .models import ContactSubmission\n\nclass ContactSubmissionAdmin(admin.ModelAdmin):\n    list_display = ('name', 'email', 'message')\n\nadmin.site.register(ContactSubmission, ContactSubmissionAdmin)\n```\n### Example 3: Using the `admin.site` Object to Add Custom Actions\n```python\nfrom django.contrib import admin\nfrom .models import BookFree\n\nclass BookFreeAdmin(admin.ModelAdmin):\n    actions = ['mark_as_read']\n\n    def mark_as_read(self, request, queryset):\n        # Custom action to mark books as read\n        queryset.update(read=True)\n\nadmin.site.register(BookFree, BookFreeAdmin)\n```\n## Design Patterns\n- **Dependency Injection**: The `myapp\\admin.py` file depends on the `django.contrib.admin` module and the `myapp.models` module, demonstrating a basic form of dependency injection.\n- **Single Responsibility Principle**: The module is responsible for configuring the admin interface, adhering to the single responsibility principle.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.contrib import admin",
+            "from .models import BookFree, ContactSubmission"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:46:09.230203"
+      },
+      "myapp\\app.py": {
+        "file": "myapp\\app.py",
+        "docstring": null,
+        "functions": [
+          {
+            "name": "payment",
+            "lineno": 16,
+            "end_lineno": 39,
+            "docstring": null,
+            "signature": "payment()",
+            "parameters": [],
+            "return_type": "Any",
+            "decorators": [
+              "app.route"
+            ],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 3
+          }
+        ],
+        "classes": [],
+        "imports": [
+          "from flask import Flask, render_template, request",
+          "import mysql.connector"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\app.py` file is the main entry point for the Flask web application. It sets up the Flask server, connects to a MySQL database, and defines a single function for processing payments.\n\n## Key Functions\n### payment\n#### Function name\n`payment` - Processes a payment request from the client.\n\n#### Parameters\n- `request` (type: `request` object from Flask): The HTTP request object containing payment details.\n- `amount` (type: `float`): The amount to be paid.\n- `currency` (type: `str`): The currency of the payment.\n\n#### Returns\n- `result` (type: `dict`): A dictionary containing the payment result, including a success flag and a message.\n\n#### Example usage\n```python\nfrom myapp.app import payment\n\n# Create a sample payment request\nrequest = {\n    'amount': 10.99,\n    'currency': 'USD'\n}\n\n# Process the payment\nresult = payment(request)\n\n# Print the result\nprint(result)\n```\n\n## Dependencies\n- **Flask**: A micro web framework for building web applications.\n- **mysql.connector**: A library for connecting to MySQL databases.\n- **request**: The Flask request object, which contains the HTTP request data.\n\n## Usage Examples\n### Example 1: Processing a payment\n```python\nfrom myapp.app import payment\n\n# Create a sample payment request\nrequest = {\n    'amount': 10.99,\n    'currency': 'USD'\n}\n\n# Process the payment\nresult = payment(request)\n\n# Print the result\nprint(result)\n```\n\n### Example 2: Handling payment errors\n```python\nfrom myapp.app import payment\n\n# Create a sample payment request with an invalid amount\nrequest = {\n    'amount': -10.99,\n    'currency': 'USD'\n}\n\ntry:\n    # Process the payment\n    result = payment(request)\nexcept Exception as e:\n    # Handle the error\n    print(f\"Error: {e}\")\n```\n\n### Example 3: Using the payment function in a Flask route\n```python\nfrom myapp.app import payment\nfrom flask import Flask, request, jsonify\n\napp = Flask(__name__)\n\n@app.route('/payment', methods=['POST'])\ndef process_payment():\n    # Get the payment request from the client\n    request_data = request.get_json()\n\n    # Process the payment\n    result = payment(request_data)\n\n    # Return the result to the client\n",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from flask import Flask, render_template, request",
+            "import mysql.connector"
+          ],
+          "functions": [
+            "payment"
+          ],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:46:17.292259"
+      },
+      "myapp\\apps.py": {
+        "file": "myapp\\apps.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [
+          {
+            "name": "MyappConfig",
+            "lineno": 4,
+            "end_lineno": 6,
+            "docstring": null,
+            "bases": [
+              "AppConfig"
+            ],
+            "decorators": [],
+            "methods": [],
+            "attributes": [
+              {
+                "name": "default_auto_field",
+                "lineno": 5
+              },
+              {
+                "name": "name",
+                "lineno": 6
+              }
+            ],
+            "is_private": false
+          }
+        ],
+        "imports": [
+          "from django.apps import AppConfig"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\apps.py` file is the main configuration file for the Django application. It defines the application's configuration and initializes the necessary components.\n\n## Key Classes\n### MyappConfig\n**Class Name:** `MyappConfig`\n**Description:** The main configuration class for the Django application.\n\n**Important Methods:**\n\n- `ready(self)`: Called when the application is ready to start. This method is used to perform any necessary initialization.\n  - **Parameters:** None\n  - **Returns:** None\n  - **Example Usage:** `MyappConfig().ready()`\n\n## Dependencies\n- **Django:** The Django framework is used to build the application.\n- **django.apps:** The `django.apps` module is used to define the application's configuration.\n\n## Usage Examples\n### Example 1: Initializing the Application\n```python\nfrom myapp.apps import MyappConfig\n\nconfig = MyappConfig()\nconfig.ready()\n```\n\n### Example 2: Customizing the Application Configuration\n```python\nfrom myapp.apps import MyappConfig\n\nclass CustomConfig(MyappConfig):\n    def ready(self):\n        # Perform custom initialization\n        print(\"Custom initialization complete\")\n\nconfig = CustomConfig()\nconfig.ready()\n```\n\n### Example 3: Using the Application Configuration\n```python\nfrom myapp.apps import MyappConfig\n\nconfig = MyappConfig()\n# Use the application configuration as needed\n```\n\n## Design Patterns\n- **Singleton Pattern:** The `MyappConfig` class can be seen as a singleton, as it is the only instance of the application configuration.\n- **Factory Pattern:** The `MyappConfig` class can be extended to create custom configurations using the factory pattern.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.apps import AppConfig"
+          ],
+          "functions": [],
+          "classes": [
+            "MyappConfig"
+          ]
+        },
+        "timestamp": "2026-01-26T16:46:22.410899"
+      },
+      "myapp\\forms.py": {
+        "file": "myapp\\forms.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [
+          {
+            "name": "ContactForm",
+            "lineno": 4,
+            "end_lineno": 7,
+            "docstring": null,
+            "bases": [
+              "forms.ModelForm"
+            ],
+            "decorators": [],
+            "methods": [],
+            "attributes": [],
+            "is_private": false
+          }
+        ],
+        "imports": [
+          "from django import forms",
+          "from .models import ContactSubmission"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\forms.py` module is responsible for defining forms used in the Django application. It provides a way to create and validate user input, ensuring data consistency and integrity.\n\n## Key Classes\n### ContactForm\n#### Description\nThe `ContactForm` class is a Django form used to collect and validate user contact information.\n\n#### Parameters\n- `initial`: (dict) Initial form data\n- `prefix`: (str) Prefix for the form fields\n\n#### Returns\n- `self`: The form instance\n\n#### Example Usage\n```python\nfrom django import forms\nfrom .forms import ContactForm\n\n# Create a form instance\nform = ContactForm(initial={'name': 'John Doe'})\n\n# Render the form\nprint(form.as_p())\n```\n\n## Dependencies\n- `django`: The Django framework provides the form functionality.\n- `myapp.models`: The `ContactSubmission` model is used to validate form data.\n\n## Usage Examples\n### Example 1: Creating a form instance\n```python\nfrom django import forms\nfrom .forms import ContactForm\n\nform = ContactForm()\nprint(form.as_p())\n```\n\n### Example 2: Validating form data\n```python\nfrom django import forms\nfrom .forms import ContactForm\n\nform = ContactForm(data={'name': 'John Doe', 'email': 'john@example.com'})\nif form.is_valid():\n    print(\"Form is valid\")\nelse:\n    print(\"Form is invalid\")\n```\n\n### Example 3: Using form fields\n```python\nfrom django import forms\nfrom .forms import ContactForm\n\nform = ContactForm()\nprint(form.fields['name'].label)\n```\n\n## Design Patterns\nThe `myapp\\forms.py` module uses the **ModelForm** design pattern, which is a built-in Django design pattern for creating forms from models. This pattern helps to keep the form and model in sync, ensuring data consistency and integrity.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django import forms",
+            "from .models import ContactSubmission"
+          ],
+          "functions": [],
+          "classes": [
+            "ContactForm"
+          ]
+        },
+        "timestamp": "2026-01-26T16:46:28.901483"
+      },
+      "myapp\\models.py": {
+        "file": "myapp\\models.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [
+          {
+            "name": "ContactSubmission",
+            "lineno": 4,
+            "end_lineno": 10,
+            "docstring": null,
+            "bases": [
+              "models.Model"
+            ],
+            "decorators": [],
+            "methods": [
+              {
+                "name": "__str__",
+                "lineno": 9,
+                "end_lineno": 10,
+                "docstring": null,
+                "signature": "__str__(self)",
+                "parameters": [
+                  {
+                    "name": "self",
+                    "type": "Any",
+                    "default": null,
+                    "kind": "positional"
+                  }
+                ],
+                "return_type": "Any",
+                "decorators": [],
+                "is_async": false,
+                "is_private": true,
+                "complexity": 1
+              }
+            ],
+            "attributes": [
+              {
+                "name": "name",
+                "lineno": 5
+              },
+              {
+                "name": "email",
+                "lineno": 6
+              },
+              {
+                "name": "message",
+                "lineno": 7
+              }
+            ],
+            "is_private": false
+          },
+          {
+            "name": "BookFree",
+            "lineno": 12,
+            "end_lineno": 17,
+            "docstring": null,
+            "bases": [
+              "models.Model"
+            ],
+            "decorators": [],
+            "methods": [
+              {
+                "name": "__str__",
+                "lineno": 16,
+                "end_lineno": 17,
+                "docstring": null,
+                "signature": "__str__(self)",
+                "parameters": [
+                  {
+                    "name": "self",
+                    "type": "Any",
+                    "default": null,
+                    "kind": "positional"
+                  }
+                ],
+                "return_type": "Any",
+                "decorators": [],
+                "is_async": false,
+                "is_private": true,
+                "complexity": 1
+              }
+            ],
+            "attributes": [
+              {
+                "name": "full_name",
+                "lineno": 13
+              },
+              {
+                "name": "email",
+                "lineno": 14
+              }
+            ],
+            "is_private": false
+          }
+        ],
+        "imports": [
+          "from django.db import models"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\models.py` module is responsible for defining database models for the application. It uses Django's ORM (Object-Relational Mapping) system to interact with the database.\n\n## Key Classes\n### ContactSubmission\nContact submission model.\n\n- **Parameters**: None\n- **Returns**: An instance of the `ContactSubmission` model.\n- **Example usage**:\n  ```python\ncontact_submission = ContactSubmission.objects.create(\n    name='John Doe',\n    email='john@example.com',\n    message='Hello, world!'\n)\n```\n\n### BookFree\nBook free model.\n\n- **Parameters**: None\n- **Returns**: An instance of the `BookFree` model.\n- **Example usage**:\n  ```python\nbook_free = BookFree.objects.create(\n    title='Free Book',\n    author='John Doe',\n    description='This is a free book.'\n)\n```\n\n## Key Functions\nNone\n\n## Dependencies\n- **Django**: The module uses Django's ORM system to interact with the database.\n- **Django models**: The module uses Django's built-in `models` module to define database models.\n\n## Usage Examples\n### Example 1: Creating a new contact submission\n```python\nfrom myapp.models import ContactSubmission\n\ncontact_submission = ContactSubmission.objects.create(\n    name='John Doe',\n    email='john@example.com',\n    message='Hello, world!'\n)\nprint(contact_submission.name)  # Output: John Doe\n```\n\n### Example 2: Creating a new book free\n```python\nfrom myapp.models import BookFree\n\nbook_free = BookFree.objects.create(\n    title='Free Book',\n    author='John Doe',\n    description='This is a free book.'\n)\nprint(book_free.title)  # Output: Free Book\n```\n\n### Example 3: Retrieving all contact submissions\n```python\nfrom myapp.models import ContactSubmission\n\ncontact_submissions = ContactSubmission.objects.all()\nfor submission in contact_submissions:\n    print(submission.name)\n```\n\n## Design Patterns\n- **Factory Method**: The `ContactSubmission` and `BookFree` models use the factory method pattern to create instances of themselves.\n- **Single Responsibility Principle**: Each model has a single responsibility, which is to represent a specific entity in the database.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.db import models"
+          ],
+          "functions": [],
+          "classes": [
+            "ContactSubmission",
+            "BookFree"
+          ]
+        },
+        "timestamp": "2026-01-26T16:46:36.638481"
+      },
+      "myapp\\urls.py": {
+        "file": "myapp\\urls.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [],
+        "imports": [
+          "from django.urls import path",
+          "from . import views"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\urls.py` file is responsible for defining URL patterns for the Django application. It serves as a central registry for mapping URLs to specific views, enabling the application to handle HTTP requests and route them to the corresponding handlers.\n\n## Key Functions\nThis module does not contain any functions.\n\n## Key Classes\nThis module does not contain any classes.\n\n## Dependencies\n- **Django**: The Django framework is used to build the web application.\n- **`django.urls`**: The `django.urls` module provides the necessary functionality for defining URL patterns.\n- **`views`**: The `views` module is imported from the same package, containing the view functions that handle HTTP requests.\n\n## Usage Examples\n### Example 1: Defining a URL Pattern\n```python\nfrom django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('hello/', views.hello_view, name='hello'),\n]\n```\nIn this example, a URL pattern is defined for the `/hello/` path, which maps to the `hello_view` function in the `views` module.\n\n### Example 2: Using URL Names\n```python\nfrom django.urls import reverse\n\nurl_name = reverse('hello')\nprint(url_name)  # Output: /hello/\n```\nIn this example, the `reverse` function is used to generate the URL name for the `hello` view.\n\n### Example 3: Using URL Patterns with Parameters\n```python\nfrom django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('users/<int:user_id>/', views.user_detail_view, name='user_detail'),\n]\n```\nIn this example, a URL pattern is defined with a parameter `user_id`, which is expected to be an integer. The `user_detail_view` function in the `views` module will receive the `user_id` parameter.\n\n## Design Patterns\nThis module uses the **Registry Pattern**, where the `urlpatterns` list serves as a registry for URL patterns. This pattern allows for easy management and extension of URL patterns in the application.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.urls import path",
+            "from . import views"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:46:43.503373"
+      },
+      "myapp\\views.py": {
+        "file": "myapp\\views.py",
+        "docstring": null,
+        "functions": [
+          {
+            "name": "Index",
+            "lineno": 9,
+            "end_lineno": 10,
+            "docstring": null,
+            "signature": "Index(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "Home",
+            "lineno": 12,
+            "end_lineno": 13,
+            "docstring": null,
+            "signature": "Home(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "About",
+            "lineno": 15,
+            "end_lineno": 16,
+            "docstring": null,
+            "signature": "About(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "Salary_based_attendance",
+            "lineno": 18,
+            "end_lineno": 19,
+            "docstring": null,
+            "signature": "Salary_based_attendance(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "AssignTask",
+            "lineno": 21,
+            "end_lineno": 22,
+            "docstring": null,
+            "signature": "AssignTask(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "LeaveManage",
+            "lineno": 24,
+            "end_lineno": 25,
+            "docstring": null,
+            "signature": "LeaveManage(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "AttendanceManage",
+            "lineno": 27,
+            "end_lineno": 28,
+            "docstring": null,
+            "signature": "AttendanceManage(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "Contact",
+            "lineno": 30,
+            "end_lineno": 31,
+            "docstring": null,
+            "signature": "Contact(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "Freedemo",
+            "lineno": 33,
+            "end_lineno": 34,
+            "docstring": null,
+            "signature": "Freedemo(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "CongratsFree",
+            "lineno": 36,
+            "end_lineno": 37,
+            "docstring": null,
+            "signature": "CongratsFree(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "bookfree",
+            "lineno": 39,
+            "end_lineno": 57,
+            "docstring": null,
+            "signature": "bookfree(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 4
+          },
+          {
+            "name": "trynow",
+            "lineno": 58,
+            "end_lineno": 67,
+            "docstring": null,
+            "signature": "trynow(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 2
+          },
+          {
+            "name": "Payment",
+            "lineno": 69,
+            "end_lineno": 74,
+            "docstring": null,
+            "signature": "Payment(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 2
+          },
+          {
+            "name": "success_page",
+            "lineno": 76,
+            "end_lineno": 77,
+            "docstring": null,
+            "signature": "success_page(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "contact_form",
+            "lineno": 79,
+            "end_lineno": 88,
+            "docstring": null,
+            "signature": "contact_form(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 3
+          },
+          {
+            "name": "success_page",
+            "lineno": 90,
+            "end_lineno": 91,
+            "docstring": null,
+            "signature": "success_page(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 1
+          },
+          {
+            "name": "login_view",
+            "lineno": 93,
+            "end_lineno": 106,
+            "docstring": null,
+            "signature": "login_view(request)",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "Any",
+                "default": null,
+                "kind": "positional"
+              }
+            ],
+            "return_type": "Any",
+            "decorators": [],
+            "is_async": false,
+            "is_private": false,
+            "complexity": 4
+          }
+        ],
+        "classes": [],
+        "imports": [
+          "from django.shortcuts import render, HttpResponse, redirect",
+          "from .forms import ContactForm",
+          "from .models import BookFree",
+          "from django.contrib.auth import authenticate, login",
+          "from django.contrib.auth.forms import AuthenticationForm",
+          "from django.db import connection as conn"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\views.py` module is responsible for handling HTTP requests and returning HTTP responses in a Django application. It provides a set of views that interact with the application's models, forms, and templates to display data to users.\n\n## Key Functions\n### Index\n- **Function name**: Index\n  - **Purpose**: Handles the root URL of the application.\n  - **Parameters**: None\n  - **Returns**: HttpResponse (an HTTP response object)\n  - **Example usage**: `response = Index(request)` where `request` is an HTTP request object.\n\n### Home\n- **Function name**: Home\n  - **Purpose**: Handles the home page URL of the application.\n  - **Parameters**: None\n  - **Returns**: HttpResponse (an HTTP response object)\n  - **Example usage**: `response = Home(request)` where `request` is an HTTP request object.\n\n### About\n- **Function name**: About\n  - **Purpose**: Handles the about page URL of the application.\n  - **Parameters**: None\n  - **Returns**: HttpResponse (an HTTP response object)\n  - **Example usage**: `response = About(request)` where `request` is an HTTP request object.\n\n### Salary_based_attendance\n- **Function name**: Salary_based_attendance\n  - **Purpose**: Handles salary-based attendance functionality.\n  - **Parameters**:\n    - `request`: HTTP request object\n    - `pk`: primary key of the attendance record (int)\n  - **Returns**: HttpResponse (an HTTP response object)\n  - **Example usage**: `response = Salary_based_attendance(request, pk=123)` where `request` is an HTTP request object and `pk` is the primary key of the attendance record.\n\n### AssignTask\n- **Function name**: AssignTask\n  - **Purpose**: Handles task assignment functionality.\n  - **Parameters**:\n    - `request`: HTTP request object\n    - `pk`: primary key of the task record (int)\n  - **Returns**: HttpResponse (an HTTP response object)\n  - **Example usage**: `response = AssignTask(request, pk=123)` where `request` is an HTTP request object and `pk` is the primary key of the task record.\n\n### LeaveManage\n- **Function name**: LeaveManage\n  - **Purpose**: Handles leave management functionality.\n  - **Parameters**:\n    - `request`: HTTP request object\n  - **Returns**: HttpResponse (an HTTP response object)\n  - **",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.shortcuts import render, HttpResponse, redirect",
+            "from .forms import ContactForm",
+            "from .models import BookFree",
+            "from django.contrib.auth import authenticate, login",
+            "from django.contrib.auth.forms import AuthenticationForm",
+            "from django.db import connection as conn"
+          ],
+          "functions": [
+            "Index",
+            "Home",
+            "About",
+            "Salary_based_attendance",
+            "AssignTask",
+            "LeaveManage",
+            "AttendanceManage",
+            "Contact",
+            "Freedemo",
+            "CongratsFree",
+            "bookfree",
+            "trynow",
+            "Payment",
+            "success_page",
+            "contact_form",
+            "success_page",
+            "login_view"
+          ],
+          "classes": []
+        },
+        "timestamp": "2026-01-26T16:46:52.615542"
+      },
+      "myapp\\migrations\\0001_initial.py": {
+        "file": "myapp\\migrations\\0001_initial.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [
+          {
+            "name": "Migration",
+            "lineno": 6,
+            "end_lineno": 23,
+            "docstring": null,
+            "bases": [
+              "migrations.Migration"
+            ],
+            "decorators": [],
+            "methods": [],
+            "attributes": [
+              {
+                "name": "initial",
+                "lineno": 8
+              },
+              {
+                "name": "dependencies",
+                "lineno": 10
+              },
+              {
+                "name": "operations",
+                "lineno": 13
+              }
+            ],
+            "is_private": false
+          }
+        ],
+        "imports": [
+          "from django.db import migrations, models"
+        ],
+        "generated_documentation": "## File Purpose\n### Migration Script\nThe `myapp\\migrations\\0001_initial.py` file is a Django migration script that initializes the database schema for the `myapp` application. It exists to create the initial database structure and populate it with initial data.\n\n## Key Functions\n### None\nThere are no functions in this module.\n\n## Key Classes\n### Migration\n#### Class Description\nThe `Migration` class is a Django migration class that defines the initial database schema for the `myapp` application.\n\n#### Important Methods\n#### `dependencies`\n- **Parameters**: None\n- **Returns**: A list of dependencies for this migration\n- **Example usage**:\n```python\nfrom django.db import migrations\n\nclass Migration(migrations.Migration):\n    dependencies = [\n        # List of dependencies for this migration\n    ]\n```\n#### `operations`\n- **Parameters**: None\n- **Returns**: A list of database operations to be executed\n- **Example usage**:\n```python\nfrom django.db import migrations\n\nclass Migration(migrations.Migration):\n    operations = [\n        # List of database operations to be executed\n    ]\n```\n#### `apply`\n- **Parameters**: None\n- **Returns**: None\n- **Example usage**:\n```python\nfrom django.db import migrations\n\nclass Migration(migrations.Migration):\n    def apply(self, project_state, schema_editor):\n        # Apply the migration\n        pass\n```\n## Dependencies\n### External Dependencies\n- **Django**: The Django framework is used to create the migration script.\n- **Django Migrations**: The `django.db.migrations` module is used to define the migration.\n\n### Internal Dependencies\n- **myapp**: The `myapp` application is the primary dependency for this migration script.\n\n## Usage Examples\n### Create Initial Database Schema\n```python\nfrom django.db import migrations\n\nclass Migration(migrations.Migration):\n    dependencies = [\n        ('myapp', '0000'),\n    ]\n\n    operations = [\n        migrations.CreateModel(\n            name='MyModel',\n            fields=[\n                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=255)),\n            ],\n        ),\n    ]\n```\n### Apply Migration\n```python\nfrom django.db import migrations\n\nclass Migration(migrations.Migration):\n    dependencies = [\n        ('myapp', '0001'),\n    ]\n\n    operations = [\n        migrations.RunPython(my_function),\n    ]\n\n    def",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.db import migrations, models"
+          ],
+          "functions": [],
+          "classes": [
+            "Migration"
+          ]
+        },
+        "timestamp": "2026-01-26T16:47:01.938518"
+      },
+      "myapp\\migrations\\0002_bookfree.py": {
+        "file": "myapp\\migrations\\0002_bookfree.py",
+        "docstring": null,
+        "functions": [],
+        "classes": [
+          {
+            "name": "Migration",
+            "lineno": 6,
+            "end_lineno": 21,
+            "docstring": null,
+            "bases": [
+              "migrations.Migration"
+            ],
+            "decorators": [],
+            "methods": [],
+            "attributes": [
+              {
+                "name": "dependencies",
+                "lineno": 8
+              },
+              {
+                "name": "operations",
+                "lineno": 12
+              }
+            ],
+            "is_private": false
+          }
+        ],
+        "imports": [
+          "from django.db import migrations, models"
+        ],
+        "generated_documentation": "## File Purpose\nThe `myapp\\migrations\\0002_bookfree.py` file is a Django database migration script. Its purpose is to create a new field in the `Book` model, making it free.\n\n## Key Classes\n### Migration\n\n**Class name**: Migration\n**Description**: A Django database migration class.\n\n- **Important methods**:\n  - `dependencies`: Returns a list of dependencies for this migration.\n  - `operations`: Returns a list of operations to be performed during this migration.\n  - `apply`: Applies the operations in this migration to the database.\n\n### Parameters and Return Values\n\n- `dependencies`: A list of dependencies for this migration.\n- `operations`: A list of operations to be performed during this migration.\n- `return value`: None\n\n### Example usage\n\n```python\nfrom django.db import migrations\n\nclass Migration(migrations.Migration):\n\n    dependencies = [\n        ('myapp', '0001_initial'),\n    ]\n\n    operations = [\n        migrations.AddField(\n            model_name='book',\n            name='is_free',\n            field=models.BooleanField(default=False),\n        ),\n    ]\n```\n\n## Dependencies\n- `django.db`: Django's database module.\n- `myapp`: The Django app that this migration belongs to.\n\n## Usage Examples\n1. To apply this migration to the database, run the following command in your terminal:\n   ```bash\npython manage.py migrate\n```\n2. To view the operations in this migration, use the following command:\n   ```bash\npython manage.py showmigrations myapp\n```\n3. To create a new migration that adds a new field to the `Book` model, use the following command:\n   ```bash\npython manage.py makemigrations myapp\n```\n\n## Design Patterns\nThis module uses the **Repository Pattern**, which is a design pattern that abstracts the data storage and retrieval logic. In this case, the `Migration` class acts as a repository for the database operations.",
+        "dependencies": {
+          "imports": [],
+          "imported_by": [],
+          "external_deps": [
+            "from django.db import migrations, models"
+          ],
+          "functions": [],
+          "classes": [
+            "Migration"
+          ]
+        },
+        "timestamp": "2026-01-26T16:47:08.187371"
+      }
+    },
+    "timestamp": "2026-01-26T16:45:31.051671",
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "total_modules_documented": 14,
+    "overview": "# claude_cloned Documentation\n\n## Repository Overview\n\n**Name**: claude_cloned\n**URL**: https://github.com/Jaychangani2005/Application.git\n**Branch**: main\n\n## Statistics\n- **Total Modules**: 14\n- **Total Lines of Code**: 0\n- **Programming Languages**: Python\n\n## Core Modules\n"
+  },
+  "phase4": {
+    "docstrings_generated": [
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\manage.py",
+        "status": "success",
+        "total_functions": 1,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "#!/usr/bin/env python\n\"\"\"Django's command-line utility for administrative tasks.\"\"\"\nimport os\nimport sys\n\n\ndef main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Application.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"\n        ) from exc\n    execute_from_command_line(sys.argv)\n\n\nif __name__ == '__main__':\n    main()\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\asgi.py",
+        "status": "success",
+        "total_functions": 0,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "\"\"\"\nASGI config for Application project.\n\nIt exposes the ASGI callable as a module-level variable named ``application``.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/howto/deployment/asgi/\n\"\"\"\n\nimport os\n\nfrom django.core.asgi import get_asgi_application\n\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Application.settings')\n\napplication = get_asgi_application()\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\settings.py",
+        "status": "success",
+        "total_functions": 0,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "\"\"\"\nDjango settings for Application project.\n\nGenerated by 'django-admin startproject' using Django 4.2.5.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/topics/settings/\n\nFor the full list of settings and their values, see\nhttps://docs.djangoproject.com/en/4.2/ref/settings/\n\"\"\"\n\nfrom pathlib import Path\n\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n\n\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-4#o@6_p&kmtwe6@nmaf2!9xl0pq7swg-&48i2)u#rkz@3z%74('\n\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\n\n\nALLOWED_HOSTS = ['*']\n\n# Application definition\n\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'myapp.apps.MyappConfig'\n]\n\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\n\n\nROOT_URLCONF = 'Application.urls'\n\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / \"templates\"],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',\n            ],\n        },\n    },\n]\n\nWSGI_APPLICATION = 'Application.wsgi.application'\n\n\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\n\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'hackathon',\n        'USER': 'unknown',\n        'PASSWORD': 'password',\n        'HOST': 'localhost',  \n        'PORT': '3306',  \n    }\n}\n\n\n# Password validation\n# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators\n\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\n    },\n]\n\n\n# Internationalization\n# https://docs.djangoproject.com/en/4.2/topics/i18n/\n\nLANGUAGE_CODE = 'en-us'\n\nTIME_ZONE = 'UTC'\n\nUSE_I18N = True\n\nUSE_TZ = True\n\n\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n\nSTATIC_URL = '/static/'\n\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\"\n]\n\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\n\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\urls.py",
+        "status": "success",
+        "total_functions": 0,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "from django.contrib import admin\nfrom django.urls import path,include\n\nadmin.site.site_header = \"JC Records\"\nadmin.site.site_title = \"JC Records Admin Portal\"\nadmin.site.index_title = \"Welcome to JC Records Portal\"\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('',include('myapp.urls'))\n]\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\commercial\\wsgi.py",
+        "status": "success",
+        "total_functions": 0,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "\"\"\"\nWSGI config for Application project.\n\nIt exposes the WSGI callable as a module-level variable named ``application``.\n\nFor more information on this file, see\nhttps://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/\n\"\"\"\n\nimport os\n\nfrom django.core.wsgi import get_wsgi_application\n\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Application.settings')\n\napplication = get_wsgi_application()\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\admin.py",
+        "status": "success",
+        "total_functions": 0,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "from django.contrib import admin\nfrom .models import BookFree, ContactSubmission\n\n# Register your models here.\nadmin.site.register(BookFree)\nadmin.site.register(ContactSubmission)\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\app.py",
+        "status": "success",
+        "total_functions": 1,
+        "functions_documented": 1,
+        "docstrings_generated": [
+          {
+            "function": "payment",
+            "line": 16
+          }
+        ],
+        "syntax_valid": false
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\apps.py",
+        "status": "success",
+        "total_functions": 0,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "from django.apps import AppConfig\n\n\nclass MyappConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'myapp'\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\forms.py",
+        "status": "success",
+        "total_functions": 0,
+        "functions_documented": 0,
+        "docstrings_generated": [],
+        "updated_code": "from django import forms\nfrom .models import ContactSubmission\n\nclass ContactForm(forms.ModelForm):\n    class Meta:\n        model = ContactSubmission\n        fields = ['name', 'email', 'message']\n\n",
+        "syntax_valid": true
+      },
+      {
+        "file": "E:\\Code to Doc\\project1\\claude_cloned\\myapp\\models.py",
+        "status": "success",
+        "total_functions": 2,
+        "functions_documented": 2,
+        "docstrings_generated": [
+          {
+            "function": "__str__",
+            "line": 9
+          },
+          {
+            "function": "__str__",
+            "line": 16
+          }
+        ],
+        "syntax_valid": false
+      }
+    ],
+    "files_processed": 10,
+    "total_functions_documented": 3,
+    "status": "completed",
+    "timestamp": "2026-01-26T16:47:08.188380",
+    "readme_generated": {
+      "path": "E:\\Code to Doc\\project1\\claude_cloned\\GENERATED_README.md",
+      "status": "completed",
+      "length": 2857
     }
   }
 }
