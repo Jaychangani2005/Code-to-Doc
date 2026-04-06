@@ -1,0 +1,11 @@
+gitpython==3.1.44
+chardet==5.2.0
+python-dotenv==1.0.1
+rich==13.9.4
+networkx>=3.2
+groq>=1.0.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-groq>=0.2.0
+langgraph>=0.2.0
+pydantic>=2.8.0

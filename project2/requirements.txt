@@ -1,4 +1,0 @@
-GitPython
-chardet
-python-magic-bin
-huggingface_hub
